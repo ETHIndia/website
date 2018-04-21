@@ -328,6 +328,12 @@ header.masthead .header-video {
   border: none;
 }
 
+@media (max-width: 768px) {
+  .card .card-header {
+    cursor: pointer;
+  }
+}
+
 .card-body {
   background: #0e091c;
 }

@@ -33,6 +33,11 @@
 
 .card {
     border: none;
+    @media (max-width: 768px) {
+        .card-header {
+            cursor: pointer;
+        }
+    }
 }
 
 .card-body {
