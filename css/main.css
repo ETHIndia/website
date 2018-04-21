@@ -185,6 +185,12 @@ img::-moz-selection {
   }
 }
 
+@media (max-width: 992px) {
+  #mainNav {
+    margin-top: 0;
+  }
+}
+
 header.masthead {
   padding-bottom: calc(10rem - 56px);
   background-position: center center;
