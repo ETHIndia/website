@@ -45,4 +45,5 @@
       $("#mainNav").css("background-color", "rgba(0, 0, 0, 0)");
     }
   });
+
 })(jQuery); // End of use strict

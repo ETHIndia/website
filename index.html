@@ -112,16 +112,7 @@
   <section id="sponsors" class="bg-primary">
     <div class="container text-center">
       <h2 class="mb-5">Sponsors</h2>
-      <div class="row mb-5">
-        <div class="col-md-4 text-center mb-5">
-          <img src="img/techyon.svg" alt="Techyon logo"></img>
-        </div>
-        <div class="col-md-4 text-center mb-5">
-          <img src="img/cigi-logo.svg" alt="Centre for international governance innovation logo"></img>
-        </div>
-        <div class="col-md-4 text-center">
-          <img src="img/Untraceable.svg" alt="Untraceable logo"></img>
-        </div>
+      <div class="row mb-5" id="sponsors-box">
       </div>
     </div>
 
@@ -262,6 +253,22 @@
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
   <script>
+    $(document).ready(function () {
+      // lazy loading sponsor's images
+      const sponsorsBox =
+        `<div class="col-md-4 text-center mb-5">
+          <img src="img/techyon.svg" alt="Techyon logo"></img>
+        </div>
+        <div class="col-md-4 text-center mb-5">
+          <img src="img/cigi-logo.svg" alt="Centre for international governance innovation logo"></img>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="img/Untraceable.svg" alt="Untraceable logo"></img>
+        </div>`;
+
+      $("#sponsors-box").html(sponsorsBox);
+    });
+
     // Register the service worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js').then(function (registration) {
