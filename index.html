@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="ETHIndia - India's first Ethereum Hackathon">
   <meta name="author" content="hackinout">
-  <meta name="theme-color" content="#363f47"/>
+  <meta name="theme-color" content="#363f47" />
 
   <title>ETHIndia - India's first Ethereum Hackathon</title>
 
@@ -22,7 +22,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-eth js-scroll-trigger" href="#page-top">
-        <img src="img/eth-logo.svg" alt="ethtarget="_blank" -header-logo"/>
+        <img src="img/eth-logo.svg" alt="Ethereum India logo"/>
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,9 @@
   <header class="masthead text-center text-white d-flex">
     <div class="container my-auto home-container">
       <div class="row">
-          <video autoplay="true" class="header-video" loop="yes" muted=""><source src="img/bg.mov" type="video/mp4"></video>
+        <video autoplay="true" class="header-video" loop="yes" muted="">
+          <source src="img/bg.mov" type="video/mp4">
+        </video>
         <div class="col-lg-8 mx-auto">
           <p class="text-faded mb-1">10th August 2018, Bangalore
           </p>
@@ -160,7 +162,7 @@
             </div>
 
             <div class="card">
-              <div class="card-header collapsed" data-toggle="collapse" role="tab"  href="#collapse3">
+              <div class="card-header collapsed" data-toggle="collapse" role="tab" href="#collapse3">
                 <a class="panel-title card-title text-black">
                   <h4 class="arrow display-5">
                     Who can participate?
@@ -175,7 +177,7 @@
             </div>
 
             <div class="card">
-              <div class="card-header collapsed" data-toggle="collapse" role="tab"  href="#collapse4">
+              <div class="card-header collapsed" data-toggle="collapse" role="tab" href="#collapse4">
                 <a class="panel-title card-title text-black">
                   <h4 class="arrow display-5">
                     Who can participate?
@@ -249,6 +251,18 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
+  <script>
+    // Register the service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
 </body>
 
 </html>
