@@ -13,7 +13,6 @@
         $("html, body").animate(
           {
             scrollTop: target.offset().top
-            // scrollTop: target[0].id === 'faq' ? target.offset().top + 1500  : target.offset().top - 60
           },
           1000,
           "easeInOutExpo"
@@ -33,16 +32,4 @@
     target: "#mainNav",
     offset: 57
   });
-
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
 })(jQuery); // End of use strict
