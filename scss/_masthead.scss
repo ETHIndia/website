@@ -1,0 +1,37 @@
+// Styling for the header
+header.masthead {
+    padding-bottom: calc(10rem - 56px);
+    background-position: center center;
+    @include background-cover;
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-weight: 300;
+        color: $white;
+    }
+    .home-container {
+        margin-top: 28vh !important;
+    }
+    @media (min-width: 768px) {
+        p {
+            font-size: 1rem;
+        }
+    }
+    @media (min-width: 992px) {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 10px;
+        padding-bottom: 0;
+        h1 {
+            font-size: 2.3rem;
+        }
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 4rem;
+            line-height: 1.4;
+            color: $white;
+        }
+    }
+}

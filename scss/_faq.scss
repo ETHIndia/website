@@ -1,0 +1,35 @@
+.faq-box h4 {
+    text-align: left !important;
+}
+
+.card-title {
+    text-align: left !important;
+    color: white;
+}
+
+#toggle {
+    border: 1px solid $secondary;
+    border-radius: 0;
+}
+
+.toggle-panel .card-header h4:after {
+    font-family: 'FontAwesome';
+    content: "\f106";
+    float: right;
+    color: $secondary;
+    font-size: 1.2em;
+}
+
+.toggle-panel .card-header.collapsed h4:after {
+    content: "\f107";
+}
+
+.card-header:hover .arrow:after {
+    color: $black;
+}
+.card-body {
+    padding: 0;
+}
+.panel-text {
+    padding: 1.25rem;
+}

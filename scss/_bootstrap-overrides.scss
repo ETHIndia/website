@@ -1,0 +1,58 @@
+// Bootstrap overrides for this template
+.text-primary {
+    color: $primary !important;
+}
+
+.btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    padding: 16px 56px !important;
+    border-radius: 2px;
+    @include main-font;
+}
+
+.btn-xl {
+    padding: 1rem 2rem;
+}
+
+.btn-primary {
+    background-color: $secondary;
+    border-color: $secondary;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: darken($secondary, 5%) !important;
+    }
+    &:active,
+    &:focus {
+        box-shadow: 0 0 0 0.2rem $secondary !important;
+    }
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    background: $primary;
+}
+
+.card-header {
+    background: $primary;
+    border-bottom: 1px solid $secondary;
+    border-top: 1px solid $secondary;
+    &:hover {
+        background: $secondary;
+    }
+}
+
+.panel-body {
+    background: $primary;
+}
+
+.navbar-light .navbar-toggler {
+    color: $white;
+    background: $white;
+}
