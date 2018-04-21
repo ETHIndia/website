@@ -13,6 +13,15 @@ header.masthead {
     .home-container {
         margin-top: 28vh !important;
     }
+    .header-video {
+        position: fixed;
+        top:50%;
+        left:0;
+        bottom: 0;
+        width: 100%;
+        z-index: -111;
+        height: auto;
+    }
     @media (min-width: 768px) {
         p {
             font-size: 1rem;

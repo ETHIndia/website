@@ -42,6 +42,7 @@ h6 {
 
 .bg-primary {
   background-color: #0e091c !important;
+  z-index: 111;
 }
 
 .bg-dark {
@@ -204,6 +205,16 @@ header.masthead p {
 
 header.masthead .home-container {
   margin-top: 28vh !important;
+}
+
+header.masthead .header-video {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -111;
+  height: auto;
 }
 
 @media (min-width: 768px) {
