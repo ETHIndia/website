@@ -46,8 +46,8 @@
 
 .card-header {
     background: $primary;
-    border-bottom: 1px solid $secondary;
-    border-top: 1px solid $secondary;
+    // border-bottom: 1px solid $secondary;
+    // border-top: 1px solid $secondary;
     &:hover {
         background: $secondary;
     }

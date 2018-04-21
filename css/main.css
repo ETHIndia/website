@@ -257,6 +257,14 @@ header.masthead .header-video {
   text-align: left !important;
 }
 
+.card button {
+  border: 1px solid #363f47;
+}
+
+.card button:focus {
+  outline: none;
+}
+
 .card-title {
   text-align: left !important;
   color: white;
@@ -346,8 +354,6 @@ header.masthead .header-video {
 
 .card-header {
   background: #0e091c;
-  border-bottom: 1px solid #363f47;
-  border-top: 1px solid #363f47;
 }
 
 .card-header:hover {

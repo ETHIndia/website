@@ -2,6 +2,13 @@
     text-align: left !important;
 }
 
+.card button {
+    border: 1px solid $secondary;
+    &:focus {
+        outline: none;
+    }
+}
+
 .card-title {
     text-align: left !important;
     color: white;
