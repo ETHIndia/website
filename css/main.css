@@ -258,24 +258,21 @@ header.masthead .header-video {
 }
 
 .schedule-box .schedule-day {
-  background-color: #000;
+  background-color: rgba(54, 63, 71, 0.5);
   margin-left: 8%;
 }
 
 .schedule-box .talk-bubble {
-  position: relative;
-  background-color: #363f47;
-  display: inline-block;
-  width: 104%;
-  margin-left: -17px;
-  position: relative;
+  margin-left: 14px;
 }
 
 .schedule-box .talk-wrap {
-  position: relative;
-  width: 103%;
   text-align: center;
   background: #373f47;
+  position: relative;
+  width: 107%;
+  display: inline-block;
+  margin-left: -4%;
 }
 
 .schedule-box .table-schedule {

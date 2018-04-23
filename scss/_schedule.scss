@@ -4,22 +4,19 @@
         color: $white;
     }
     .schedule-day {
-        background-color: $black;
+        background-color: $dark-secondary;
         margin-left: 8%;
     }
     .talk-bubble {
-        position: relative;
-        background-color: $secondary;
-        display: inline-block;
-        width: 104%;
-        margin-left: -17px;
-        position: relative
+        margin-left: 14px;
     }
     .talk-wrap {
-        position: relative;
-        width: 103%;
         text-align: center;
         background: #373f47;
+        position: relative;
+        width: 107%;
+        display: inline-block;
+        margin-left: -4%;
     }
     .table-schedule {
         border: none;
