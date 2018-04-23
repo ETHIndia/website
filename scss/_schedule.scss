@@ -1,0 +1,68 @@
+// styling for Schedule section
+.schedule-box {
+    td {
+        color: $white;
+    }
+    .schedule-day {
+        background-color: $black;
+        margin-left: 8%;
+    }
+    .talk-bubble {
+        position: relative;
+        background-color: $secondary;
+        display: inline-block;
+        width: 104%;
+        margin-left: -17px;
+        position: relative
+    }
+    .talk-wrap {
+        position: relative;
+        width: 103%;
+        text-align: center;
+        background: #373f47;
+    }
+    .table-schedule {
+        border: none;
+        font-size: 1.2em
+    }
+    .table-schedule>tbody>tr>td {
+        border: none
+    }
+    .table-schedule td:first-of-type {
+        border-left: 2px solid #ccc
+    }
+    .table-schedule td:last-of-type {
+        border-left: 0
+    }
+    .schedule-time {
+        width: 1em;
+        height: 1em;
+        background: #f3a700;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 2px
+    }
+    .schedule-time.morning {
+        background: #f59b00
+    }
+    .schedule-time.noon {
+        background: #f5cc00
+    }
+    .schedule-time.evening {
+        background: #f5a300
+    }
+    .schedule-time.night {
+        background: #000
+    }
+    .schedule-time.night:before {
+        content: '';
+        width: calc(1em - 8px);
+        height: calc(1em - 8px);
+        background: #fff;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%
+    }
+}

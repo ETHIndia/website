@@ -253,6 +253,85 @@ header.masthead .header-video {
   max-width: 400px;
 }
 
+.schedule-box td {
+  color: #fff;
+}
+
+.schedule-box .schedule-day {
+  background-color: #000;
+  margin-left: 8%;
+}
+
+.schedule-box .talk-bubble {
+  position: relative;
+  background-color: #363f47;
+  display: inline-block;
+  width: 104%;
+  margin-left: -17px;
+  position: relative;
+}
+
+.schedule-box .talk-wrap {
+  position: relative;
+  width: 103%;
+  text-align: center;
+  background: #373f47;
+}
+
+.schedule-box .table-schedule {
+  border: none;
+  font-size: 1.2em;
+}
+
+.schedule-box .table-schedule > tbody > tr > td {
+  border: none;
+}
+
+.schedule-box .table-schedule td:first-of-type {
+  border-left: 2px solid #ccc;
+}
+
+.schedule-box .table-schedule td:last-of-type {
+  border-left: 0;
+}
+
+.schedule-box .schedule-time {
+  width: 1em;
+  height: 1em;
+  background: #f3a700;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  left: 2px;
+}
+
+.schedule-box .schedule-time.morning {
+  background: #f59b00;
+}
+
+.schedule-box .schedule-time.noon {
+  background: #f5cc00;
+}
+
+.schedule-box .schedule-time.evening {
+  background: #f5a300;
+}
+
+.schedule-box .schedule-time.night {
+  background: #000;
+}
+
+.schedule-box .schedule-time.night:before {
+  content: '';
+  width: calc(1em - 8px);
+  height: calc(1em - 8px);
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+}
+
 .faq-box h4 {
   text-align: left !important;
 }
