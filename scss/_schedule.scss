@@ -1,48 +1,55 @@
 // styling for Schedule section
 .schedule-box {
-    .schedule-day {
-        background-color: $dark-secondary;
-        margin-left: 8%;
-    }
-    .talk-bubble {
-        margin-left: 14px;
-    }
-    .talk-wrap {
-        text-align: center;
-        background: #373f47;
-        position: relative;
-        width: 107%;
-        display: inline-block;
-        margin-left: -4%;
-    }
-    .table-schedule {
-        border: none;
-        font-size: 1.2em;
-        margin: 1rem;
-    }
-    .table-schedule>tbody>tr>td {
-        border: none
-    }
-    .table-schedule td:last-of-type {
-        border-left: 0
-    }
-    .schedule-time {
-        width: 1em;
-        height: 1em;
-        position: absolute;
-        margin-top: 0.2rem;
-        background-repeat: no-repeat;
-    }
-    .schedule-time.morning {
-        background-image: url(../img/sunset.svg);
-    }
-    .schedule-time.noon {
-        background-image: url(../img/sun.svg);
-    }
-    .schedule-time.evening {
-        background-image: url(../img/sunset.svg);
-    }
-    .schedule-time.night {
-        background-image: url(../img/moon.svg);
-    }
+  .schedule-day {
+    background-color: $dark-secondary;
+    margin-left: 8%;
+  }
+  .talk-bubble {
+    margin-left: 14px;
+  }
+  .hack-day p {
+    font-size: 1.6rem;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .talk-wrap {
+    text-align: center;
+    background: #373f47;
+    position: relative;
+    width: 107%;
+    display: inline-block;
+    margin-left: -4%;
+  }
+  .table-schedule {
+    border: none;
+    font-size: 1.2em;
+    margin: 1rem;
+  }
+  .table-schedule > tbody > tr > td {
+    border: none;
+  }
+  .table-schedule td:last-of-type {
+    border-left: 0;
+  }
+  .schedule-time {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    margin-top: 0.2rem;
+    background-repeat: no-repeat;
+  }
+  .schedule-time.morning {
+    background-image: url(../img/sunset.svg);
+  }
+  .schedule-time.noon {
+    background-image: url(../img/sun.svg);
+  }
+  .schedule-time.evening {
+    background-image: url(../img/sunset.svg);
+  }
+  .schedule-time.night {
+    background-image: url(../img/moon.svg);
+  }
 }

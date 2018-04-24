@@ -262,6 +262,14 @@ header.masthead .header-video {
   margin-left: 14px;
 }
 
+.schedule-box .hack-day p {
+  font-size: 1.6rem;
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 .schedule-box .talk-wrap {
   text-align: center;
   background: #373f47;
