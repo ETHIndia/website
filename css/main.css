@@ -379,8 +379,31 @@ header.masthead .header-video {
   padding: 0 !important;
 }
 
-.social-icons {
-  color: #fff;
+.footer .social-icons {
+  width: 20px;
+  margin-left: 10px;
+  height: 20px;
+  padding: 0;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.footer .icon-instagram {
+  background-image: url(/img/Instagram.svg);
+}
+
+.footer .icon-facebook {
+  background-image: url(/img/Facebook.svg);
+}
+
+.footer .icon-twitter {
+  background-image: url(/img/Twitter.svg);
+}
+
+.footer .icon-linkedin {
+  background-image: url(/img/Linkedin.svg);
 }
 
 .text-primary {

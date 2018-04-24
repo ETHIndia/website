@@ -1,7 +1,28 @@
 .footer {
-    padding:0 !important;
-}
-
-.social-icons {
-    color: $white;
+    padding: 0 !important;
+    .social-icons {
+        width: 20px;
+        margin-left: 10px;
+        height: 20px;
+        padding: 0;
+        background-repeat: no-repeat;
+        vertical-align: bottom;
+        display: inline-block;
+        border-radius: 4px;
+    }
+    :&hover{
+        display: none;
+    }
+    .icon-instagram {
+        background-image: url(/img/Instagram.svg);
+    }
+    .icon-facebook {
+        background-image: url(/img/Facebook.svg);
+    }
+    .icon-twitter {
+        background-image: url(/img/Twitter.svg);
+    }
+    .icon-linkedin {
+        background-image: url(/img/Linkedin.svg);
+    }
 }
