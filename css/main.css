@@ -317,6 +317,12 @@ header.masthead .header-video {
   background-image: url(../img/moon.svg);
 }
 
+@media (max-width: 992px) {
+  .schedule-box .schedule-day {
+    margin-left: 0;
+  }
+}
+
 .faq-box h4 {
   text-align: left !important;
 }
