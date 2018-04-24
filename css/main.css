@@ -402,19 +402,19 @@ header.masthead .header-video {
 }
 
 .footer .icon-instagram {
-  background-image: url("./img/Instagram.svg");
+  background-image: url(../img/Instagram.svg);
 }
 
 .footer .icon-facebook {
-  background-image: url("./img/Facebook.svg");
+  background-image: url(../img/Facebook.svg);
 }
 
 .footer .icon-twitter {
-  background-image: url("./img/Twitter.svg");
+  background-image: url(../img/Twitter.svg);
 }
 
 .footer .icon-linkedin {
-  background-image: url("./img/Linkedin.svg");
+  background-image: url(../img/Linkedin.svg);
 }
 
 .text-primary {
