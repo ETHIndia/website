@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-  color: #0e091c;
+  color: #fff;
 }
 
 h1,
@@ -472,6 +472,10 @@ header.masthead .header-video {
 
 .panel-body {
   background: #0e091c;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.8rem;
+  opacity: 0.5;
 }
 
 .navbar-light .navbar-toggler {

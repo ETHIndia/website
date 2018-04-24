@@ -54,6 +54,10 @@
 
 .panel-body {
     background: $primary;
+    color: $white;
+    font-weight: 300;
+    line-height: 1.8rem;
+    opacity: 0.5;
 }
 
 .navbar-light .navbar-toggler {

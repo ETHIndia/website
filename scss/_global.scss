@@ -24,7 +24,7 @@ a {
     color: $white;
     @include transition-all;
     &:hover {
-        color: darken($primary, .1);
+        color: $white;
     }
 }
 
