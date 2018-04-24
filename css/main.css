@@ -253,10 +253,6 @@ header.masthead .header-video {
   max-width: 400px;
 }
 
-.schedule-box td {
-  color: #fff;
-}
-
 .schedule-box .schedule-day {
   background-color: rgba(54, 63, 71, 0.5);
   margin-left: 8%;
@@ -278,14 +274,11 @@ header.masthead .header-video {
 .schedule-box .table-schedule {
   border: none;
   font-size: 1.2em;
+  margin: 1rem;
 }
 
 .schedule-box .table-schedule > tbody > tr > td {
   border: none;
-}
-
-.schedule-box .table-schedule td:first-of-type {
-  border-left: 2px solid #ccc;
 }
 
 .schedule-box .table-schedule td:last-of-type {
@@ -295,38 +288,25 @@ header.masthead .header-video {
 .schedule-box .schedule-time {
   width: 1em;
   height: 1em;
-  background: #f3a700;
-  border-radius: 50%;
-  border: 2px solid #fff;
   position: absolute;
-  left: 2px;
+  margin-top: 0.2rem;
+  background-repeat: no-repeat;
 }
 
 .schedule-box .schedule-time.morning {
-  background: #f59b00;
+  background-image: url(../img/sunset.svg);
 }
 
 .schedule-box .schedule-time.noon {
-  background: #f5cc00;
+  background-image: url(../img/sun.svg);
 }
 
 .schedule-box .schedule-time.evening {
-  background: #f5a300;
+  background-image: url(../img/sunset.svg);
 }
 
 .schedule-box .schedule-time.night {
-  background: #000;
-}
-
-.schedule-box .schedule-time.night:before {
-  content: '';
-  width: calc(1em - 8px);
-  height: calc(1em - 8px);
-  background: #fff;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  border-radius: 50%;
+  background-image: url(../img/moon.svg);
 }
 
 .faq-box h4 {
@@ -391,19 +371,19 @@ header.masthead .header-video {
 }
 
 .footer .icon-instagram {
-  background-image: url("../img/Instagram.svg");
+  background-image: url("./img/Instagram.svg");
 }
 
 .footer .icon-facebook {
-  background-image: url("../img/Facebook.svg");
+  background-image: url("./img/Facebook.svg");
 }
 
 .footer .icon-twitter {
-  background-image: url("../img/Twitter.svg");
+  background-image: url("./img/Twitter.svg");
 }
 
 .footer .icon-linkedin {
-  background-image: url("../img/Linkedin.svg");
+  background-image: url("./img/Linkedin.svg");
 }
 
 .text-primary {
@@ -466,4 +446,16 @@ header.masthead .header-video {
 .navbar-light .navbar-toggler {
   color: #fff;
   background: #fff;
+}
+
+.table td,
+.table th {
+  padding: 1.2rem;
+  padding-top: 0.5rem;
+  vertical-align: initial;
+  border-top: 1px solid #dee2e6;
+}
+
+td {
+  color: #fff;
 }

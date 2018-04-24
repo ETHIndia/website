@@ -1,8 +1,5 @@
 // styling for Schedule section
 .schedule-box {
-    td {
-        color: $white;
-    }
     .schedule-day {
         background-color: $dark-secondary;
         margin-left: 8%;
@@ -20,13 +17,11 @@
     }
     .table-schedule {
         border: none;
-        font-size: 1.2em
+        font-size: 1.2em;
+        margin: 1rem;
     }
     .table-schedule>tbody>tr>td {
         border: none
-    }
-    .table-schedule td:first-of-type {
-        border-left: 2px solid #ccc
     }
     .table-schedule td:last-of-type {
         border-left: 0
@@ -34,32 +29,20 @@
     .schedule-time {
         width: 1em;
         height: 1em;
-        background: #f3a700;
-        border-radius: 50%;
-        border: 2px solid #fff;
         position: absolute;
-        left: 2px
+        margin-top: 0.2rem;
+        background-repeat: no-repeat;
     }
     .schedule-time.morning {
-        background: #f59b00
+        background-image: url(../img/sunset.svg);
     }
     .schedule-time.noon {
-        background: #f5cc00
+        background-image: url(../img/sun.svg);
     }
     .schedule-time.evening {
-        background: #f5a300
+        background-image: url(../img/sunset.svg);
     }
     .schedule-time.night {
-        background: #000
-    }
-    .schedule-time.night:before {
-        content: '';
-        width: calc(1em - 8px);
-        height: calc(1em - 8px);
-        background: #fff;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        border-radius: 50%
+        background-image: url(../img/moon.svg);
     }
 }

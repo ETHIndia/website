@@ -45,8 +45,7 @@
 }
 
 .card-header {
-    background: $primary;
-    // border-bottom: 1px solid $secondary;
+    background: $primary; // border-bottom: 1px solid $secondary;
     // border-top: 1px solid $secondary;
     &:hover {
         background: $secondary;
@@ -60,4 +59,16 @@
 .navbar-light .navbar-toggler {
     color: $white;
     background: $white;
+}
+
+.table td,
+.table th {
+    padding: 1.2rem;
+    padding-top: 0.5rem;
+    vertical-align: initial;
+    border-top: 1px solid #dee2e6;
+}
+
+td {
+    color: $white;
 }
