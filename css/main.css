@@ -40,6 +40,17 @@ h6 {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.2rem;
+  }
+}
+
 .bg-primary {
   background-color: #0e091c !important;
   z-index: 111;
@@ -69,6 +80,12 @@ a:hover {
 
 section {
   padding: 8rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem;
+  }
 }
 
 .section-heading {

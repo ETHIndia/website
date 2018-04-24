@@ -36,6 +36,9 @@ h5,
 h6 {
     @include main-font;
     color: $white;
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 }
 
 .bg-primary {
@@ -66,6 +69,9 @@ a {
 
 section {
     padding: 8rem 0;
+    @media (max-width: 768px) {
+        padding: 3rem;
+    }
 }
 
 .section-heading {
