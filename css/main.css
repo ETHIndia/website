@@ -403,7 +403,7 @@ header.masthead .header-video {
 }
 
 .footer .icon-linkedin {
-  background-image: url(../img/Linkedin.svg);
+  background-image: url("../img/Linkedin.svg");
 }
 
 .text-primary {

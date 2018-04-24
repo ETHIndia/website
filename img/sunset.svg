@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ETHindia" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-298.000000, -3041.000000)">
+        <g id="Group-6" transform="translate(298.000000, 3041.000000)">
+            <path d="M9.82842712,13.8284271 L11.8284271,13.8284271 L11.8284271,15.8284271 L9.82842712,15.8284271 L9.82842712,17.8284271 L7.82842712,17.8284271 L7.82842712,13.8284271 L9.82842712,13.8284271 Z" id="Combined-Shape" fill="#0774CF" transform="translate(9.828427, 15.828427) rotate(-135.000000) translate(-9.828427, -15.828427) "></path>
+            <path d="M4.08295844,11 C4.0283988,10.6747915 4,10.3407122 4,10 C4,6.6862915 6.6862915,4 10,4 C13.3137085,4 16,6.6862915 16,10 C16,10.3407122 15.9716012,10.6747915 15.9170416,11 L4.08295844,11 Z M9,0 L11,0 L11,3 L9,3 L9,0 Z M20,9 L20,11 L17,11 L17,9 L20,9 Z M3,9 L3,11 L-4.4408921e-16,11 L0,9 L3,9 Z M16.363961,2.22182541 L17.7781746,3.63603897 L15.6568542,5.75735931 L14.2426407,4.34314575 L16.363961,2.22182541 Z M5.75735931,4.34314575 L4.34314575,5.75735931 L2.22182541,3.63603897 L3.63603897,2.22182541 L5.75735931,4.34314575 Z" id="Combined-Shape" fill="#CF9F07"></path>
+        </g>
+    </g>
+</svg>
