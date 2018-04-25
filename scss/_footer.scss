@@ -8,6 +8,9 @@
         background-repeat: no-repeat;
         vertical-align: bottom;
         display: inline-block;
+        &:hover {
+            opacity: 0.7;
+        }
     }
     .icon-instagram {
         background-image: url(../img/instagram.svg);
