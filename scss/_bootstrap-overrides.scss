@@ -3,6 +3,10 @@
     color: $primary !important;
 }
 
+h2 {
+    font-size:  3rem;
+}
+
 .btn {
     font-weight: 700;
     text-transform: uppercase;
@@ -68,8 +72,6 @@
 .table td,
 .table th {
     padding: 1.2rem;
-    // padding-top: 0.5rem;
-    // vertical-align: initial;
     border-top: 1px solid #dee2e6;
 }
 

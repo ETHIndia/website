@@ -16,10 +16,6 @@ hr {
     border-color: $primary;
 }
 
-hr.light {
-    border-color: $white;
-}
-
 a {
     color: $white;
     @include transition-all;

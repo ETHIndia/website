@@ -15,10 +15,6 @@ hr {
   border-color: #0e091c;
 }
 
-hr.light {
-  border-color: #fff;
-}
-
 a {
   color: #fff;
   -webkit-transition: all 0.2s;
@@ -454,6 +450,10 @@ header.masthead .header-video {
 
 .text-primary {
   color: #0e091c !important;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 .btn {
