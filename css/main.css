@@ -483,6 +483,10 @@ h2 {
   background: #363f47;
 }
 
+.card-header:first-child {
+  border-radius: 0;
+}
+
 .panel-body {
   background: #0e091c;
   color: #fff;

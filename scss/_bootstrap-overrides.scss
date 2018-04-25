@@ -4,7 +4,7 @@
 }
 
 h2 {
-    font-size:  3rem;
+    font-size: 3rem;
 }
 
 .btn {
@@ -49,10 +49,12 @@ h2 {
 }
 
 .card-header {
-    background: $primary; // border-bottom: 1px solid $secondary;
-    // border-top: 1px solid $secondary;
+    background: $primary;
     &:hover {
         background: $secondary;
+    }
+    &:first-child {
+        border-radius: 0;
     }
 }
 
