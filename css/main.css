@@ -290,16 +290,18 @@ header.masthead .header-video {
 .schedule-box .talk-wrap {
   text-align: center;
   background: #373f47;
-  position: relative;
-  width: 107%;
+  left: 0;
+  position: absolute;
+  width: 100%;
   display: inline-block;
-  margin-left: -4%;
 }
 
 .schedule-box .table-schedule {
   border: none;
   font-size: 1.2em;
   margin: 1rem;
+  margin-top: 6rem;
+  position: relative;
 }
 
 .schedule-box .table-schedule > tbody > tr > td {
@@ -337,6 +339,21 @@ header.masthead .header-video {
 @media (max-width: 992px) {
   .schedule-box .schedule-day {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .schedule-box .schedule-time {
+    display: none;
+  }
+  .schedule-box .hack-day p {
+    font-size: 1.2rem;
+  }
+  .schedule-box .table td,
+  .schedule-box .table th {
+    padding-top: 0.5rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
