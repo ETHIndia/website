@@ -398,7 +398,6 @@ header.masthead .header-video {
   background-repeat: no-repeat;
   vertical-align: bottom;
   display: inline-block;
-  border-radius: 4px;
 }
 
 .footer .icon-instagram {
@@ -415,10 +414,13 @@ header.masthead .header-video {
 
 .footer .icon-telegram {
   background-image: url(../img/telegram.svg);
+  width: 19px;
+  height: 18px;
 }
 
 .footer .icon-medium {
   background-image: url(../img/medium.svg);
+  height: 18px;
 }
 
 .footer .icon-slack {
