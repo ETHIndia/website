@@ -402,19 +402,31 @@ header.masthead .header-video {
 }
 
 .footer .icon-instagram {
-  background-image: url(../img/Instagram.svg);
+  background-image: url(../img/instagram.svg);
 }
 
 .footer .icon-facebook {
-  background-image: url(../img/Facebook.svg);
+  background-image: url(../img/facebook.svg);
 }
 
 .footer .icon-twitter {
-  background-image: url(../img/Twitter.svg);
+  background-image: url(../img/twitter.svg);
+}
+
+.footer .icon-telegram {
+  background-image: url(../img/telegram.svg);
+}
+
+.footer .icon-medium {
+  background-image: url(../img/medium.svg);
+}
+
+.footer .icon-slack {
+  background-image: url(../img/slack.svg);
 }
 
 .footer .icon-linkedin {
-  background-image: url(../img/Linkedin.svg);
+  background-image: url(../img/linkedin.svg);
 }
 
 .text-primary {
