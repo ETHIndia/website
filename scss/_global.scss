@@ -1,27 +1,22 @@
 // Global styling
 body,
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    @include main-font;
-    background: $primary;
-}
-
-hr {
-    max-width: 50px;
-    border-width: 3px;
-    border-color: $primary;
+  @include main-font;
+  background: $primary;
 }
 
 a {
+  color: $link;
+  @include transition-all;
+  &:hover {
+    text-decoration: none;
     color: $white;
-    @include transition-all;
-    &:hover {
-        color: $white;
-    }
+  }
 }
 
 h1,
@@ -30,69 +25,53 @@ h3,
 h4,
 h5,
 h6 {
-    @include main-font;
-    color: $white;
-    @media (max-width: 768px) {
-        font-size: 1.2rem;
-    }
+  @include main-font;
+  color: $white;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 .bg-primary {
-    background-color: $primary !important;
-    z-index: 111;
+  background-color: $primary !important;
+  z-index: 111;
 }
 
 .bg-dark {
-    background-color: $gray-900 !important;
+  background-color: $gray-900 !important;
 }
 
 p {
-    color: $white;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-a {
-    color: $link;
-    &:hover {
-        text-decoration: none;
-    }
+  color: $white;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .text-faded {
-    color: fade-out($white, .3);
+  color: fade-out($white, 0.3);
+  font-size: 1.2rem;
 }
 
 section {
-    padding: 8rem 0;
-    @media (max-width: 768px) {
-        padding: 3rem;
-    }
+  padding: 8rem 0;
+  @media (max-width: 768px) {
+    padding: 3rem;
+  }
 }
 
 .section-heading {
-    margin-top: 0;
-    color: $white;
+  margin-top: 0;
+  color: $white;
 }
 
 ::-moz-selection {
-    color: $white;
-    background: $gray-900;
-    text-shadow: none;
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
 }
 
 ::selection {
-    color: $white;
-    background: $gray-900;
-    text-shadow: none;
-}
-
-img::selection {
-    color: $white;
-    background: transparent;
-}
-
-img::-moz-selection {
-    color: $white;
-    background: transparent;
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
 }
