@@ -12,6 +12,9 @@
         margin: 0 auto;
         margin-right: 30%;
         margin-bottom: 130px;
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
     img {
         width: 3em;

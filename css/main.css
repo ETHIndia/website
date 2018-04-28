@@ -404,6 +404,12 @@ header.masthead .header-video {
   margin-bottom: 130px;
 }
 
+@media (max-width: 768px) {
+  .footer .circle {
+    display: none;
+  }
+}
+
 .footer img {
   width: 3em;
   height: 3em;
