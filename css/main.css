@@ -392,6 +392,10 @@ header.masthead .header-video {
   margin-right: 10%;
 }
 
+.footer .footer-content {
+  margin-bottom: 7rem !important;
+}
+
 .footer .circle {
   height: 3em;
   width: 3em;
