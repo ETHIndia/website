@@ -340,10 +340,6 @@ header.masthead .header-video {
   margin-top: 1%;
 }
 
-.faqs-box {
-  padding-bottom: 17rem !important;
-}
-
 .card button {
   border: 1px solid #363f47;
 }
@@ -390,6 +386,14 @@ header.masthead .header-video {
   padding: 0 !important;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.footer .footer-content {
+  margin-top: 10rem !important;
+}
+
+.footer .circle {
+  padding-left: 6.5rem;
 }
 
 @media (max-width: 768px) {

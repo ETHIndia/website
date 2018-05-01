@@ -2,7 +2,11 @@
   padding: 0 !important;
   margin-left: 10%;
   margin-right: 10%;
+  .footer-content {
+    margin-top: 10rem !important;
+  }
   .circle {
+    padding-left: 6.5rem;
     @media (max-width: 768px) {
       display: none;
     }
