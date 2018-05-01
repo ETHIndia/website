@@ -340,8 +340,8 @@ header.masthead .header-video {
   margin-top: 1%;
 }
 
-.faq-box h4 {
-  text-align: left !important;
+.faqs-box {
+  padding-bottom: 17rem !important;
 }
 
 .card button {
