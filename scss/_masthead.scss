@@ -1,6 +1,7 @@
 // Styling for the header
 header.masthead {
     padding-bottom: calc(10rem - 56px);
+    margin-bottom: 25rem;
     background-position: center center;
     @include background-cover;
     h1 {
