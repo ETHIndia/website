@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-  background: #0e091c;
+  background: #0E0E1A;
 }
 
 a {
@@ -43,7 +43,7 @@ h6 {
 }
 
 .bg-primary {
-  background-color: #0e091c !important;
+  background-color: #0E0E1A !important;
   z-index: 111;
 }
 
@@ -101,12 +101,12 @@ section {
 #mainNav .navbar-eth {
   font-weight: 700;
   text-transform: uppercase;
-  color: #0e091c;
+  color: #0E0E1A;
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-eth:focus, #mainNav .navbar-eth:hover {
-  color: #0e091c;
+  color: #0e0e1a;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -119,7 +119,7 @@ section {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-  color: #0e091c;
+  color: #0E0E1A;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
@@ -161,10 +161,10 @@ section {
     margin: 0;
   }
   #mainNav.navbar-shrink .navbar-eth {
-    color: #0e091c;
+    color: #0e0e1a;
   }
   #mainNav.navbar-shrink .navbar-eth:focus, #mainNav.navbar-shrink .navbar-eth:hover {
-    color: #0e091c;
+    color: #0e0e1a;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -456,7 +456,7 @@ header.masthead .header-video {
 }
 
 .text-primary {
-  color: #0e091c !important;
+  color: #0E0E1A !important;
 }
 
 h2 {
@@ -501,11 +501,11 @@ h2 {
 }
 
 .card-body {
-  background: #0e091c;
+  background: #0E0E1A;
 }
 
 .card-header {
-  background: #0e091c;
+  background: #0E0E1A;
 }
 
 .card-header:hover {
@@ -517,7 +517,7 @@ h2 {
 }
 
 .panel-body {
-  background: #0e091c;
+  background: #0E0E1A;
   color: #fff;
   font-weight: 300;
   line-height: 1.8rem;
