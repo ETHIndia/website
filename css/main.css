@@ -205,7 +205,7 @@ header.masthead .home-container {
 }
 
 header.masthead .header-video {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 0;
   bottom: 0;
