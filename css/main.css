@@ -392,22 +392,6 @@ header.masthead .header-video {
   margin-right: 10%;
 }
 
-.footer .footer-content {
-  margin-bottom: 7rem !important;
-}
-
-.footer .circle {
-  height: 3em;
-  width: 3em;
-  border-radius: 50%;
-  background-color: gray;
-  position: relative;
-  display: flex;
-  margin: 0 auto;
-  margin-right: 30%;
-  margin-bottom: 130px;
-}
-
 @media (max-width: 768px) {
   .footer .circle {
     display: none;
@@ -420,70 +404,6 @@ header.masthead .header-video {
   opacity: 1;
   border-radius: 50%;
   z-index: 9999;
-}
-
-.footer .ripple {
-  display: block;
-  position: absolute;
-  top: 1.5em;
-  left: 1.5em;
-  border-radius: 50%;
-  border: 1px solid gray;
-  transform: translate(-50%, -50%);
-  animation: ripple 7s linear infinite;
-}
-
-@keyframes ripple {
-  0% {
-    height: 40px;
-    width: 40px;
-  }
-  15% {
-    height: 80px;
-    width: 80px;
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    height: 320px;
-    width: 320px;
-  }
-}
-
-.footer .r1 {
-  animation-delay: 0s;
-}
-
-.footer .r2 {
-  animation-delay: 1s;
-}
-
-.footer .r3 {
-  animation-delay: 2s;
-}
-
-.footer .r4 {
-  animation-delay: 3s;
-}
-
-.footer .r5 {
-  animation-delay: 4s;
-}
-
-.footer .r6 {
-  animation-delay: 5s;
-}
-
-.footer .r7 {
-  animation-delay: 6s;
-}
-
-.footer .r8 {
-  animation-delay: 7s;
-}
-
-.footer .r9 {
-  animation-delay: 8s;
 }
 
 .footer .social-icons {

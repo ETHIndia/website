@@ -416,19 +416,8 @@
               <a href="">Code of conduct</a>
             </h6>
           </div>
-          <div class="col-lg-6">
-            <div class="circle">
-              <img src="https://image.ibb.co/iNkYKH/ETH_icon.jpg" />
-              <div class="ripple r1"></div>
-              <div class="ripple r2"></div>
-              <div class="ripple r3"></div>
-              <div class="ripple r4"></div>
-              <div class="ripple r5"></div>
-              <div class="ripple r6"></div>
-              <div class="ripple r7"></div>
-              <div class="ripple r8"></div>
-              <div class="ripple r9"></div>
-            </div>
+          <div class="col-lg-6 circle">
+            <div id='ripple'></div>
           </div>
           <div class="col-md-6 col-lg-4 text-center text-md-right footer-content">
             <!--Facebook-->
@@ -472,6 +461,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
   <script>
     $(document).ready(function () {
       // lazy loading sponsor's images
@@ -485,6 +475,16 @@
 
       $("#sponsors-box").html(sponsorsBox);
     });
+
+    var animData = {
+      container: document.getElementById('ripple'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://akashnimare.github.io/ETHIndia/img/ripple-half.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);;
+    window.onresize = anim.resize.bind(anim);
 
     // Register the service worker
     if ('serviceWorker' in navigator) {
