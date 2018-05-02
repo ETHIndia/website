@@ -4,10 +4,6 @@
   margin-top: 40px;
   @include main-font;
   @include transition-all;
-  .navbar-shrink {
-    background: red;
-    margin: 0;
-  }
   .navbar-eth {
     font-weight: 700;
     text-transform: uppercase;
@@ -61,7 +57,7 @@
     }
     &.navbar-shrink {
       border-bottom: 1px solid fade-out($gray-900, .9);
-      background: $gray-900;
+      background: $secondary;
       margin: 0;
       .navbar-eth {
         color: darken($primary, .1);

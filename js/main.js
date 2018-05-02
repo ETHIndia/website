@@ -2,13 +2,6 @@
   "use strict"; // Start of use strict
   // Smooth scrolling using jQuery easing
 
-  // var e = function() {
-  //   ("#mainNav").offset().top > 100
-  //     ? ("#mainNav").addClass("navbar-shrink")
-  //     : ("#mainNav").removeClass("navbar-shrink");
-  // };
-  // e();
-
   $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();
     // Do something

@@ -98,11 +98,6 @@ section {
   transition: all 0.2s;
 }
 
-#mainNav .navbar-shrink {
-  background: red;
-  margin: 0;
-}
-
 #mainNav .navbar-eth {
   font-weight: 700;
   text-transform: uppercase;
@@ -162,7 +157,7 @@ section {
   }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-    background: #212529;
+    background: #363f47;
     margin: 0;
   }
   #mainNav.navbar-shrink .navbar-eth {
