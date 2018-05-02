@@ -38,7 +38,7 @@ h6 {
   h4,
   h5,
   h6 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -178,7 +178,7 @@ section {
 
 @media (max-width: 992px) {
   #mainNav {
-    margin-top: 0;
+    margin-top: 2rem;
   }
 }
 
@@ -190,6 +190,12 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media (max-width: 420px) {
+  header.masthead {
+    margin: 0;
+  }
 }
 
 header.masthead h1 {
@@ -497,6 +503,12 @@ header.masthead .header-video {
 
 h2 {
   font-size: 3rem;
+}
+
+@media (max-width: 420px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 .btn {

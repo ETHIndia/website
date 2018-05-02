@@ -3,6 +3,9 @@ header.masthead {
     padding-bottom: calc(10rem - 56px);
     margin-bottom: 25rem;
     background-position: center center;
+    @media (max-width: 420px) {
+        margin: 0;
+     }
     @include background-cover;
     h1 {
         font-size: 2rem;
@@ -62,4 +65,5 @@ header.masthead {
             color: $white;
         }
     }
+
 }
