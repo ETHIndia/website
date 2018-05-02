@@ -14,10 +14,28 @@ header.masthead {
     .home-container {
         margin-top: 28vh !important;
     }
+    .bg-image-1 {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -111;
+        height: auto;
+    }
+    .bg-image-2 {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -111;
+        height: auto;
+    }
     .header-video {
         position: absolute;
-        top:50%;
-        left:0;
+        top: 50%;
+        left: 0;
         bottom: 0;
         width: 100%;
         z-index: -111;
