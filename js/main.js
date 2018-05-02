@@ -1,6 +1,24 @@
 (function($) {
   "use strict"; // Start of use strict
   // Smooth scrolling using jQuery easing
+
+  // var e = function() {
+  //   ("#mainNav").offset().top > 100
+  //     ? ("#mainNav").addClass("navbar-shrink")
+  //     : ("#mainNav").removeClass("navbar-shrink");
+  // };
+  // e();
+
+  $(window).scroll(function(event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    if (scroll > 100) {
+      $("#mainNav").addClass("navbar-shrink");
+    } else {
+      $("#mainNav").removeClass("navbar-shrink");
+    }
+  });
+
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (
       location.pathname.replace(/^\//, "") ==
@@ -27,8 +45,10 @@
 
   // Closes responsive menu when a scroll trigger link is clicked
   $(".js-scroll-trigger").click(function() {
-    $(".navbar-collapse").collapse("hide");
-    $("#mainNav").css("background-color", "rgba(0, 0, 0, 0)");
+    if (window.innerWidth < "992") {
+      $(".navbar-collapse").collapse("hide");
+      $("#mainNav").css("background-color", "rgba(0, 0, 0, 0)");
+    }
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
@@ -45,5 +65,4 @@
       $("#mainNav").css("background-color", "rgba(0, 0, 0, 0)");
     }
   });
-
 })(jQuery); // End of use strict

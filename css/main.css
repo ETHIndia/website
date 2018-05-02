@@ -98,6 +98,11 @@ section {
   transition: all 0.2s;
 }
 
+#mainNav .navbar-shrink {
+  background: red;
+  margin: 0;
+}
+
 #mainNav .navbar-eth {
   font-weight: 700;
   text-transform: uppercase;

@@ -4,6 +4,10 @@
   margin-top: 40px;
   @include main-font;
   @include transition-all;
+  .navbar-shrink {
+    background: red;
+    margin: 0;
+  }
   .navbar-eth {
     font-weight: 700;
     text-transform: uppercase;
