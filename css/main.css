@@ -207,7 +207,7 @@ header.masthead .home-container {
 
 header.masthead .bg-image-1 {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -400,8 +400,9 @@ header.masthead .header-video {
 }
 
 .panel-text {
-  padding: 1.25rem;
+  padding: 1rem 1rem 0 1rem;
   text-align: left;
+  padding-bottom: 0;
 }
 
 .footer {
