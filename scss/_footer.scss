@@ -2,8 +2,15 @@
   padding: 0 !important;
   margin-left: 12%;
   margin-right: 9%;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
   .footer-content {
     margin-top: 10rem !important;
+    @media (max-width: 768px) {
+      margin-top: 1rem !important;
+      margin-bottom: 2rem;
+    }
   }
   .circle {
     padding-left: 10%;
