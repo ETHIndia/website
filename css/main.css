@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
   background: #0E0E1A;
 }
 
@@ -233,12 +234,19 @@ header.masthead .bg-image-2 {
 
 header.masthead .header-video {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 0;
   bottom: 0;
   width: 100%;
   z-index: -111;
   height: auto;
+}
+
+@media (min-width: 1024px) {
+  header.masthead .header-video {
+    left: -13.5%;
+    width: 127%;
+  }
 }
 
 @media (min-width: 768px) {

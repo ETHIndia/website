@@ -5,7 +5,7 @@ header.masthead {
     background-position: center center;
     @media (max-width: 420px) {
         margin: 0;
-     }
+    }
     @include background-cover;
     h1 {
         font-size: 2rem;
@@ -37,12 +37,16 @@ header.masthead {
     }
     .header-video {
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: 0;
         bottom: 0;
         width: 100%;
         z-index: -111;
         height: auto;
+        @media (min-width: 1024px) {
+            left: -13.5%;
+            width: 127%;
+        }
     }
     @media (min-width: 768px) {
         p {
@@ -65,5 +69,4 @@ header.masthead {
             color: $white;
         }
     }
-
 }
