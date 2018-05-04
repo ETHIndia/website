@@ -273,7 +273,8 @@ header.masthead .header-video {
 
 .schedule-box .schedule-day {
   background-color: rgba(54, 63, 71, 0.5);
-  margin-left: 8%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .schedule-box .talk-bubble {
