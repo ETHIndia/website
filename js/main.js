@@ -23,7 +23,7 @@
       if (target.length) {
         $("html, body").animate(
           {
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 100
           },
           1000
         );
