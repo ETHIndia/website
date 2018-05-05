@@ -315,7 +315,7 @@ header.masthead .header-video {
 }
 
 .schedule-box b, .schedule-box strong {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .schedule-box .table-schedule > tbody > tr > td {
