@@ -314,12 +314,18 @@ header.masthead .header-video {
   position: relative;
 }
 
+.schedule-box b, .schedule-box strong {
+  font-weight: normal;
+}
+
 .schedule-box .table-schedule > tbody > tr > td {
   border: none;
 }
 
 .schedule-box .table-schedule td:last-of-type {
   border-left: 0;
+  color: #fff;
+  opacity: 0.5;
 }
 
 .schedule-box .schedule-time {

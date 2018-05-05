@@ -30,11 +30,16 @@
         margin-top: 6rem;
         position: relative;
     }
+    b, strong {
+        font-weight: normal;
+    }
     .table-schedule>tbody>tr>td {
         border: none;
     }
     .table-schedule td:last-of-type {
         border-left: 0;
+        color: $white;
+        opacity: 0.5;
     }
     .schedule-time {
         width: 1em;
