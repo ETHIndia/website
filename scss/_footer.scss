@@ -5,6 +5,13 @@
   @media (max-width: 768px) {
     margin: 0;
   }
+  a {
+    color: $white !important;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
   .footer-content {
     margin-top: 10rem !important;
     @media (max-width: 768px) {

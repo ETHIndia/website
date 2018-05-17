@@ -442,6 +442,15 @@ header.masthead .header-video {
   }
 }
 
+.footer a {
+  color: #fff !important;
+  opacity: 0.5;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
 .footer .footer-content {
   margin-top: 10rem !important;
 }
