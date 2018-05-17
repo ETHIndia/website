@@ -294,11 +294,12 @@ header.masthead .header-video {
 }
 
 .schedule-box .hack-day p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   float: left;
   margin-left: 50px;
   margin-top: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 1.7rem;
 }
 
 .schedule-box .talk-wrap {

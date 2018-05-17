@@ -1,8 +1,7 @@
 // styling for Schedule section
 .schedule-box {
     .schedule-day {
-        background-color: $dark-secondary;
-        // margin-left: 4%;
+        background-color: $dark-secondary; // margin-left: 4%;
         margin-right: 3%;
     }
     .schedule-details {
@@ -13,11 +12,12 @@
         margin-left: 14px;
     }
     .hack-day p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         float: left;
         margin-left: 50px;
         margin-top: 20px;
-        font-weight: bold;
+        font-weight: 700;
+        line-height: 1.7rem;
     }
     .talk-wrap {
         text-align: center;
