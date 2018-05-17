@@ -372,8 +372,12 @@ header.masthead .header-video {
     margin-left: 0;
     display: block;
   }
+  .schedule-box .talk-wrap {
+    top: -4.3rem;
+  }
   .schedule-box .hack-day p {
     font-size: 1.2rem;
+    margin-left: 2.2rem;
   }
   .schedule-box .table td,
   .schedule-box .table th {
