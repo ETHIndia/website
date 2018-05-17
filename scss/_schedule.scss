@@ -2,8 +2,12 @@
 .schedule-box {
     .schedule-day {
         background-color: $dark-secondary;
-        margin-left: 4%;
-        margin-right: 4%;
+        // margin-left: 4%;
+        margin-right: 3%;
+    }
+    .schedule-details {
+        margin-left: 7%;
+        display: inherit;
     }
     .talk-bubble {
         margin-left: 14px;
@@ -30,7 +34,8 @@
         margin-top: 6rem;
         position: relative;
     }
-    b, strong {
+    b,
+    strong {
         font-weight: 300;
     }
     .table-schedule>tbody>tr>td {
@@ -68,6 +73,10 @@
     @media (max-width: 420px) {
         .schedule-time {
             display: none;
+        }
+        .schedule-details {
+            margin-left: 0;
+            display: block;
         }
         .hack-day p {
             font-size: 1.2rem;

@@ -281,8 +281,12 @@ header.masthead .header-video {
 
 .schedule-box .schedule-day {
   background-color: rgba(54, 63, 71, 0.5);
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-right: 3%;
+}
+
+.schedule-box .schedule-details {
+  margin-left: 7%;
+  display: inherit;
 }
 
 .schedule-box .talk-bubble {
@@ -314,7 +318,8 @@ header.masthead .header-video {
   position: relative;
 }
 
-.schedule-box b, .schedule-box strong {
+.schedule-box b,
+.schedule-box strong {
   font-weight: 300;
 }
 
@@ -361,6 +366,10 @@ header.masthead .header-video {
 @media (max-width: 420px) {
   .schedule-box .schedule-time {
     display: none;
+  }
+  .schedule-box .schedule-details {
+    margin-left: 0;
+    display: block;
   }
   .schedule-box .hack-day p {
     font-size: 1.2rem;
