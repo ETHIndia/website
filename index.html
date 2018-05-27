@@ -35,6 +35,24 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/main.min.css" rel="stylesheet">
+
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+
+    #map {
+      height: 100%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body id="page-top">
@@ -436,9 +454,10 @@
           <button class="btn btn-secondary">Get Directions</button>
         </div>
         <div class="col">
-          <iframe frameborder="0" style="border:0; height: 100%; width: 100%" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA06IMZ1lEx9XrzTDcLPALTeojJAl0UY5k
-          &q=MLR+Convention+Center,Bangalore" allowfullscreen>
-          </iframe>
+          <div id="map"></div>
+          <!-- <iframe frameborder="0" style="border:0; height: 100%; width: 100%" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA06IMZ1lEx9XrzTDcLPALTeojJAl0UY5k -->
+          <!-- &q=MLR+Convention+Center,Bangalore" allowfullscreen> -->
+          <!-- </iframe> -->
         </div>
       </div>
     </div>
@@ -493,6 +512,284 @@
     </footer>
   </section>
 
+  <script>
+    var map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 12.999005,
+          lng: 77.701937
+        },
+        zoom: 16,
+        styles: [{
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#ffffff"
+            }]
+          },
+          {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+                "color": "#000000"
+              },
+              {
+                "lightness": 13
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#000000"
+            }]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+                "color": "#144b53"
+              },
+              {
+                "lightness": 14
+              },
+              {
+                "weight": 1.4
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "administrative.province",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text",
+            "stylers": [{
+                "saturation": "-100"
+              },
+              {
+                "lightness": "-100"
+              },
+              {
+                "gamma": "0.00"
+              },
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.neighborhood",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "visibility": "simplified"
+            }]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "visibility": "on"
+            }]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [{
+              "color": "#08304b"
+            }]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "landscape.man_made",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "visibility": "simplified"
+            }]
+          },
+          {
+            "featureType": "landscape.man_made",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "visibility": "on"
+            }]
+          },
+          {
+            "featureType": "landscape.man_made",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "landscape.natural",
+            "elementType": "geometry.fill",
+            "stylers": [{
+                "visibility": "on"
+              },
+              {
+                "color": "#203260"
+              }
+            ]
+          },
+          {
+            "featureType": "landscape.natural.landcover",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "landscape.natural.terrain",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "landscape.natural.terrain",
+            "elementType": "labels.icon",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#0c4152"
+              },
+              {
+                "lightness": 5
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.icon",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#000000"
+            }]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+                "color": "#0b434f"
+              },
+              {
+                "lightness": 25
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#000000"
+            }]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+                "color": "#0b3d51"
+              },
+              {
+                "lightness": 16
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#000000"
+            }]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [{
+              "color": "#146474"
+            }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [{
+              "color": "#021019"
+            }]
+          }
+        ]
+      });
+
+      var marker = new google.maps.Marker({
+        position: {
+          lat: 12.999005,
+          lng: 77.701937
+        },
+        map: map,
+        title: 'MLR Convention Center'
+      });
+    }
+  </script>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -535,6 +832,8 @@
       });
     }
   </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA06IMZ1lEx9XrzTDcLPALTeojJAl0UY5k&callback=initMap" async
+    defer></script>
 </body>
 
 </html>
