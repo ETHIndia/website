@@ -425,6 +425,25 @@
     </div>
   </section>
 
+  <section id="venue" style="background: linear-gradient(270deg, rgba(28,40,72,0) 0%, #172341 100%); padding: 64px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Venue</h1>
+          <img src="/img/mlr.jpg" style="max-height:100%; max-width:100%; padding-top: 32px; padding-bottom: 24px">
+          <p>MLR Convention Center</p>
+          <p class="text-faded mb-4">Brigade Millenium Campus, JP Nagar 7th Phase, Bengaluru, Karnataka, 560078</p>
+          <button class="btn btn-secondary">Get Directions</button>
+        </div>
+        <div class="col">
+          <iframe frameborder="0" style="border:0; height: 100%; width: 100%" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA06IMZ1lEx9XrzTDcLPALTeojJAl0UY5k
+          &q=MLR+Convention+Center,Bangalore" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="footer">
     <footer>
       <div class="container">
@@ -482,6 +501,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
   <script>
     $(document).ready(function () {
+
       // lazy loading sponsor's images
       const sponsorsBox =
         `<div class="col-md-6 text-center mb-5 mt-2">
@@ -499,9 +519,9 @@
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'https://akashnimare.github.io/ETHIndia/img/ripple-half.json'
+      path: 'img/ripple.json'
     };
-    var anim = bodymovin.loadAnimation(animData);;
+    var anim = bodymovin.loadAnimation(animData);
     window.onresize = anim.resize.bind(anim);
 
     // Register the service worker

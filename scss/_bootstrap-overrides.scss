@@ -38,6 +38,22 @@ h2 {
     }
 }
 
+.btn-secondary {
+    background-color: $white;
+    border-color: $white;
+    color: $primary;    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary;
+        background-color: darken($white, 5%) !important;
+    }
+    &:active,
+    &:focus {
+        box-shadow: 0 0 0 0.2rem $white !important;
+    }
+}
+
 .card {
     border: none;
     @media (max-width: 768px) {

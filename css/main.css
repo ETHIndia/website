@@ -592,6 +592,21 @@ h2 {
   box-shadow: 0 0 0 0.2rem #00A7D3 !important;
 }
 
+.btn-secondary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #203260;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #203260;
+  background-color: #f2f2f2 !important;
+}
+
+.btn-secondary:active, .btn-secondary:focus {
+  box-shadow: 0 0 0 0.2rem #fff !important;
+}
+
 .card {
   border: none;
 }
