@@ -11,7 +11,7 @@
     @include main-font;
     &:focus,
     &:hover {
-      color: darken($primary, .1);
+      color: $white;
     }
   }
   .navbar-nav {
@@ -21,12 +21,12 @@
         font-size: 1rem;
         font-weight: 500;
         text-transform: uppercase;
-        color: $gray-900;
+        color: rgba(134, 142, 150, 1.0);
         &:hover {
-          color: $primary;
+          color: $white;
         }
         &.active {
-          color: $white !important;
+          color: $secondary !important;
           background-color: transparent;
           &:hover {
             background-color: transparent;
@@ -57,7 +57,9 @@
     }
     &.navbar-shrink {
       border-bottom: 1px solid fade-out($gray-900, .9);
-      background: $secondary;
+      background: #111C33;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       margin: 0;
       .navbar-eth {
         color: darken($primary, .1);
@@ -70,7 +72,7 @@
       .navbar-nav > li.nav-item > a.nav-link:focus {
         color:$gray-600;
         &:hover {
-          color: $secondary;
+          color: $white;
         }
       }
     }
