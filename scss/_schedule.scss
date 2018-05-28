@@ -10,9 +10,12 @@
     }
     .talk-bubble {
         margin-left: 14px;
+        p {
+            text-transform: uppercase
+        }
     }
     .hack-day p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         float: left;
         margin-left: 50px;
         margin-top: 20px;
@@ -21,7 +24,7 @@
     }
     .talk-wrap {
         text-align: center;
-        background: #373f47;
+        background: $secondary;
         left: 0;
         position: absolute;
         width: 100%;
@@ -29,9 +32,9 @@
     }
     .table-schedule {
         border: none;
-        font-size: 1.2em;
+        font-size: 1em;
         margin: 1rem;
-        margin-top: 6rem;
+        margin-top: 7rem;
         position: relative;
     }
     b,

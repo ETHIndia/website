@@ -1,4 +1,3 @@
-
 .card button {
     border: 1px solid $secondary;
     &:focus {
@@ -16,26 +15,33 @@
     border-radius: 0;
 }
 
-.toggle-panel .card-header h4:after {
+.toggle-panel .card-header h5:after {
     font-family: 'FontAwesome';
     content: "\f106";
     float: right;
     color: $secondary;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-.toggle-panel .card-header.collapsed h4:after {
+.toggle-panel .card-header.collapsed h5:after {
     content: "\f107";
 }
 
 .card-header:hover .arrow:after {
     color: $black;
 }
+
 .card-body {
     padding: 0;
 }
+
 .panel-text {
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 2rem 0 2rem;
     text-align: left;
     padding-bottom: 0;
+    font-size: 1rem
+}
+
+.panel-title, .arrow {
+    margin-bottom: 0;
 }

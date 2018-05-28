@@ -9,6 +9,7 @@ body {
     @include main-font;
     overflow-x: hidden;
     background: $primary;
+    font-size: $font-size-base;
 }
 
 a {
@@ -42,6 +43,18 @@ h6 {
     background-color: $gray-900 !important;
 }
 
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    img {
+        width: 100vw;
+    }
+}
+
 p {
     color: $white;
     font-size: 1.2rem;
@@ -56,7 +69,7 @@ p {
 section {
     padding: 5rem 0;
     @media (max-width: 768px) {
-        padding: 3rem;
+        padding: 0.8rem;
     }
 }
 
