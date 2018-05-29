@@ -423,8 +423,20 @@ header.masthead p {
 
 /* Always set the map height explicitly to define the size of the div
      * element that contains the map. */
+#venue {
+  background: linear-gradient(270deg, rgba(28, 40, 72, 0) 0%, #172341 100%);
+  padding: 64px 0;
+}
+
 #map {
   height: 100%;
+}
+
+.mlr {
+  max-height: 100%;
+  max-width: 100%;
+  padding-top: 32px;
+  padding-bottom: 24px;
 }
 
 .footer {
@@ -449,7 +461,7 @@ header.masthead p {
 }
 
 .footer .footer-content {
-  margin-top: 10rem !important;
+  margin-top: 8rem !important;
 }
 
 @media (max-width: 768px) {
