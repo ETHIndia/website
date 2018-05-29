@@ -2,6 +2,8 @@ body,
 html {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -224,43 +226,6 @@ header.masthead p {
   color: #fff;
 }
 
-header.masthead .bg-image-1 {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -111;
-  height: auto;
-}
-
-header.masthead .bg-image-2 {
-  position: absolute;
-  top: 85%;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -111;
-  height: auto;
-}
-
-header.masthead .header-video {
-  position: absolute;
-  top: 48%;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -111;
-  height: auto;
-}
-
-@media (min-width: 1024px) {
-  header.masthead .header-video {
-    left: -13.5%;
-    width: 127%;
-  }
-}
-
 @media (min-width: 768px) {
   header.masthead p {
     font-size: 1rem;
@@ -454,6 +419,10 @@ header.masthead .header-video {
 
 .panel-title, .arrow {
   margin-bottom: 0;
+}
+
+#map {
+  height: 100%;
 }
 
 .footer {

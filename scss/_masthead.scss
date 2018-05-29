@@ -1,7 +1,5 @@
 // Styling for the header
 header.masthead {
-    // padding-bottom: calc(10rem - 56px);
-    // margin-bottom: 15rem;
     background-position: center center;
     height: 100%;
     min-height: 100vh;
@@ -15,39 +13,6 @@ header.masthead {
     p {
         font-weight: 300;
         color: $white;
-    } // .home-container {
-    // margin-top: 28vh !important;
-    // }
-    .bg-image-1 {
-        position: absolute;
-        top: 40%;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -111;
-        height: auto;
-    }
-    .bg-image-2 {
-        position: absolute;
-        top: 85%;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -111;
-        height: auto;
-    }
-    .header-video {
-        position: absolute;
-        top: 48%;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -111;
-        height: auto;
-        @media (min-width: 1024px) {
-            left: -13.5%;
-            width: 127%;
-        }
     }
     @media (min-width: 768px) {
         p {
