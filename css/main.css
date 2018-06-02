@@ -555,6 +555,10 @@ header.masthead .header-video {
   color: #203260 !important;
 }
 
+::selection {
+  background: #00A9DB;
+}
+
 h2 {
   font-size: 3rem;
 }
@@ -605,6 +609,46 @@ h2 {
 
 .btn-secondary:active, .btn-secondary:focus {
   box-shadow: 0 0 0 0.2rem #fff !important;
+}
+
+.speaker-card {
+  border: none;
+  margin: 1.618rem 0;
+}
+
+.speaker-card:hover {
+  cursor: pointer;
+}
+
+.speaker-card:hover .speaker-card-header {
+  background: #fff;
+  color: #212529;
+}
+
+.speaker-card-img-top {
+  height: 255px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.speaker-card-body {
+  background: #203260;
+}
+
+.speaker-card-header {
+  background: #00A7D3;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+.speaker-card-header:hover {
+  background: #fff;
+  color: #212529;
+}
+
+.speaker-card-header:first-child {
+  border-radius: 0;
 }
 
 .card {

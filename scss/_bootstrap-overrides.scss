@@ -3,6 +3,10 @@
     color: $primary !important;
 }
 
+::selection {
+    background: #00A9DB
+}
+
 h2 {
     font-size: 3rem;
     @media (max-width: 420px) {
@@ -41,7 +45,7 @@ h2 {
 .btn-secondary {
     background-color: $white;
     border-color: $white;
-    color: $primary;    
+    color: $primary;
     &:hover,
     &:focus,
     &:active {
@@ -51,6 +55,42 @@ h2 {
     &:active,
     &:focus {
         box-shadow: 0 0 0 0.2rem $white !important;
+    }
+}
+
+.speaker-card {
+    border: none;
+    margin: 1.618rem 0;
+    &:hover {
+        cursor: pointer;
+        .speaker-card-header {
+            background: $white;
+            color: $gray-900;
+        }
+    }
+}
+
+.speaker-card-img-top {
+    height: 255px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.speaker-card-body {
+    background: $primary;
+}
+
+.speaker-card-header {
+    background: $secondary;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    &:hover {
+        background: $white;
+        color: $gray-900;
+    }
+    &:first-child {
+        border-radius: 0;
     }
 }
 
