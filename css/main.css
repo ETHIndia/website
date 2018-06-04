@@ -130,7 +130,6 @@ section {
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
   font-size: 1rem;
   font-weight: 500;
-  text-transform: uppercase;
   color: #868e96;
 }
 
@@ -558,6 +557,10 @@ header.masthead p {
   color: #203260 !important;
 }
 
+::selection {
+  background: #00A9DB;
+}
+
 h2 {
   font-size: 3rem;
 }
@@ -584,6 +587,7 @@ h2 {
 .btn-primary {
   background-color: #00A7D3;
   border-color: #00A7D3;
+  padding: 16px 56px !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -596,6 +600,7 @@ h2 {
 }
 
 .btn-secondary {
+  padding: 12px 16px !important;
   background-color: #fff;
   border-color: #fff;
   color: #203260;
@@ -608,6 +613,46 @@ h2 {
 
 .btn-secondary:active, .btn-secondary:focus {
   box-shadow: 0 0 0 0.2rem #fff !important;
+}
+
+.speaker-card {
+  border: none;
+  margin: 1.618rem 0;
+}
+
+.speaker-card:hover {
+  cursor: pointer;
+}
+
+.speaker-card:hover .speaker-card-header {
+  background: #fff;
+  color: #212529;
+}
+
+.speaker-card-img-top {
+  height: 255px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.speaker-card-body {
+  background: #203260;
+}
+
+.speaker-card-header {
+  background: #00A7D3;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+.speaker-card-header:hover {
+  background: #fff;
+  color: #212529;
+}
+
+.speaker-card-header:first-child {
+  border-radius: 0;
 }
 
 .card {
