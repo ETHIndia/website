@@ -585,6 +585,7 @@ h2 {
 .btn-primary {
   background-color: #00A7D3;
   border-color: #00A7D3;
+  padding: 16px 56px !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -597,6 +598,7 @@ h2 {
 }
 
 .btn-secondary {
+  padding: 12px 16px !important;
   background-color: #fff;
   border-color: #fff;
   color: #203260;
