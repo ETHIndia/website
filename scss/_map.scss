@@ -1,6 +1,5 @@
 // Styling for map section
-/* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
 
 #venue {
     background: linear-gradient(270deg, rgba(28, 40, 72, 0) 0%, #172341 100%);
@@ -9,6 +8,10 @@
 
 #map {
     height: 100%;
+    @media (max-width: 991px) {
+        height: 400px;
+        margin-top: 32px;
+    }
 }
 
 .mlr {

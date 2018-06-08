@@ -49,11 +49,14 @@ h6 {
     position: absolute;
     top: 0;
     left: 0;
-    /* Preserve aspet ratio */
+    /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%;
     img {
-        width: 100vw;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
     }
 }
 
