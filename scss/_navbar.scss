@@ -15,9 +15,9 @@
     }
   }
   .navbar-nav {
-    > li.nav-item {
-       > a.nav-link,
-      > a.nav-link:focus {
+    >li.nav-item {
+      >a.nav-link,
+      >a.nav-link:focus {
         font-size: 1rem;
         font-weight: 500;
         color: rgba(134, 142, 150, 1.0);
@@ -34,6 +34,11 @@
       }
     }
   }
+  @media (max-width: 991px) {
+    .navbar-nav {
+      margin-top: 16px;
+    }
+  }
   @media (min-width: 992px) {
     border-color: transparent;
     background-color: transparent;
@@ -44,11 +49,11 @@
         color: $white;
       }
     }
-    .navbar-nav > li.nav-item > a.nav-link {
+    .navbar-nav>li.nav-item>a.nav-link {
       padding: 0.5rem 1rem;
     }
-    .navbar-nav > li.nav-item > a.nav-link,
-    .navbar-nav > li.nav-item > a.nav-link:focus {
+    .navbar-nav>li.nav-item>a.nav-link,
+    .navbar-nav>li.nav-item>a.nav-link:focus {
       color: fade-out($white, .3);
       &:hover {
         color: $white;
@@ -67,9 +72,9 @@
           color: darken($primary, .1);
         }
       }
-      .navbar-nav > li.nav-item > a.nav-link,
-      .navbar-nav > li.nav-item > a.nav-link:focus {
-        color:$gray-600;
+      .navbar-nav>li.nav-item>a.nav-link,
+      .navbar-nav>li.nav-item>a.nav-link:focus {
+        color: $gray-600;
         &:hover {
           color: $white;
         }
@@ -77,6 +82,7 @@
     }
   }
   @media (max-width: 992px) {
-    margin-top: 2rem;
+    padding: 32px 8px 8px 8px;
+    margin-top: 0px;
   }
 }

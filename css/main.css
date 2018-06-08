@@ -59,13 +59,16 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  /* Preserve aspet ratio */
+  /* Preserve aspect ratio */
   min-width: 100%;
   min-height: 100%;
 }
 
 #bg img {
-  width: 100vw;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
 }
 
 p {
@@ -149,6 +152,12 @@ section {
   background-color: transparent;
 }
 
+@media (max-width: 991px) {
+  #mainNav .navbar-nav {
+    margin-top: 16px;
+  }
+}
+
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
@@ -196,7 +205,8 @@ section {
 
 @media (max-width: 992px) {
   #mainNav {
-    margin-top: 2rem;
+    padding: 32px 8px 8px 8px;
+    margin-top: 0px;
   }
 }
 
@@ -420,8 +430,7 @@ header.masthead p {
   margin-bottom: 0;
 }
 
-/* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
 #venue {
   background: linear-gradient(270deg, rgba(28, 40, 72, 0) 0%, #172341 100%);
   padding: 64px 0;
@@ -429,6 +438,13 @@ header.masthead p {
 
 #map {
   height: 100%;
+}
+
+@media (max-width: 991px) {
+  #map {
+    height: 400px;
+    margin-top: 32px;
+  }
 }
 
 .mlr {
@@ -694,6 +710,7 @@ h2 {
 .navbar-light .navbar-toggler {
   color: #fff;
   background: #fff;
+  outline: none;
 }
 
 .table td,
