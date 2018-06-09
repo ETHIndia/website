@@ -39,7 +39,7 @@
   $(".js-scroll-trigger").click(function () {
     if (window.innerWidth < "992") {
       $(".navbar-collapse").collapse("hide");
-      $("#mainNav").css("background-color", "rgba(0, 0, 0, 0)");
+      $("#mainNav").css("background-color", "#111C33");
     }
   });
 
@@ -47,14 +47,5 @@
   $("body").scrollspy({
     target: "#mainNav",
     offset: 57
-  });
-
-  $("#mainNav button").click(function () {
-    var navBgColor = $("#mainNav").css("background-color");
-    if (navBgColor === "rgba(0, 0, 0, 0)") {
-      $("#mainNav").css("background-color", "#111c33");
-    } else {
-      $("#mainNav").css("background-color", "rgba(0, 0, 0, 0)");
-    }
   });
 })(jQuery); // End of use strict

@@ -210,6 +210,13 @@ section {
   }
 }
 
+@media (max-width: 500px) {
+  #mainNav {
+    background-color: #111C33;
+    margin-top: -20px;
+  }
+}
+
 header.masthead {
   background-position: center center;
   height: 100%;
