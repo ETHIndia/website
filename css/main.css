@@ -388,6 +388,10 @@ header.masthead p {
   margin-top: 0.4%;
 }
 
+#sponsors-box .dharma > a > img {
+  width: 245px;
+}
+
 .card button {
   border: 1px solid #00A7D3;
 }
