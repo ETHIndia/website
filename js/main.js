@@ -21,11 +21,20 @@
       var target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
-        $("html, body").animate({
-            scrollTop: target.offset().top
-          },
-          1000
-        );
+        // In mobile screens remove the height of the menu from scroll position
+        if ($(window).width() <= 768) {
+          $("html, body").animate({
+              scrollTop: target.offset().top - 80
+            },
+            1000
+          );
+        } else {
+          $("html, body").animate({
+              scrollTop: target.offset().top
+            },
+            1000
+          );
+        }        
         return false;
       }
     }
