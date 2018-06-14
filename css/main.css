@@ -152,6 +152,10 @@ section {
   background-color: transparent;
 }
 
+#mainNav .navbar-toggler {
+  background-color: #111c33;
+}
+
 @media (max-width: 991px) {
   #mainNav .navbar-nav {
     margin-top: 16px;
@@ -388,7 +392,7 @@ header.masthead p {
   margin-top: 0.4%;
 }
 
-#sponsors-box .dharma > a > img {
+#sponsors-box .dharma img {
   width: 245px;
 }
 
