@@ -647,13 +647,8 @@ h2 {
   margin: 1.618rem 0;
 }
 
-.speaker-card:hover {
-  cursor: pointer;
-}
-
 .speaker-card:hover .speaker-card-header {
-  background: #fff;
-  color: #212529;
+  background: #0093ba !important;
 }
 
 .speaker-card-img-top {
@@ -668,14 +663,9 @@ h2 {
 
 .speaker-card-header {
   background: #00A7D3;
+  color: #fff;
   text-align: center;
-  text-transform: uppercase;
-  padding: 2rem 0;
-}
-
-.speaker-card-header:hover {
-  background: #fff;
-  color: #212529;
+  padding: 1rem 0 0.5rem;
 }
 
 .speaker-card-header:first-child {
