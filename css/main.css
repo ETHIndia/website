@@ -648,20 +648,15 @@ h2 {
 
 .speaker-card {
   border: none;
-  margin: 1.618rem 0;
-}
-
-.speaker-card:hover {
-  cursor: pointer;
+  margin: 1rem 0;
 }
 
 .speaker-card:hover .speaker-card-header {
-  background: #fff;
-  color: #212529;
+  background: #172341 !important;
 }
 
 .speaker-card-img-top {
-  height: 255px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
 }
@@ -671,19 +666,30 @@ h2 {
 }
 
 .speaker-card-header {
-  background: #00A7D3;
+  color: #fff;
   text-align: center;
-  text-transform: uppercase;
-  padding: 2rem 0;
-}
-
-.speaker-card-header:hover {
-  background: #fff;
-  color: #212529;
+  padding: 1.2rem 0 0.8rem 0;
 }
 
 .speaker-card-header:first-child {
   border-radius: 0;
+}
+
+.speaker-card-header h5 {
+  font-weight: bold;
+}
+
+.speaker-card-header p, .speaker-card-header h5 {
+  font-size: 1rem;
+}
+
+.speaker-card-header p {
+  margin-bottom: 0;
+}
+
+.no-gutters [class*="col-"] {
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
 .card {
