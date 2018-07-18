@@ -3,6 +3,9 @@
     &:focus {
         outline: none;
     }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .card-title {

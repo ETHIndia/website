@@ -404,6 +404,10 @@ header.masthead p {
   outline: none;
 }
 
+.card button:hover {
+  cursor: pointer;
+}
+
 .card-title {
   text-align: left !important;
   color: white;
