@@ -232,6 +232,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
+    function POST(url = "", data = {}) {
+      // Default options are marked with *
+      return fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, cors, *same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: "same-origin", // include, same-origin, *omit
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+          },
+          referrer: "no-referrer", // no-referrer, *client
+          body: JSON.stringify(data), // body data type must match "Content-Type" header
+        })
+        .then(response => response.json()) // parses response to JSON
+        .catch(error => console.error(`Fetch Error =\n`, error));
+    };
+
     $(document).ready(function () {
 
       // lazy loading sponsor's images
@@ -263,11 +280,18 @@
         "description": "Tech Talks + Workshop on 10th August",
         "image": "/favicons/apple-touch-icon-152x152.png",
         "handler": function (response) {
-          $("#success-alert").css({
-            'visibility': 'visible',
-            'display': 'block'
-          });
-          alert(response.razorpay_payment_id);
+          POST(`https://devfolio.co/api/events`, {
+              razorpay_payment_id: response.razorpay_payment_id,
+              amount: options.amount
+            })
+            .then(function () {
+              $("#success-alert").css({
+                'visibility': 'visible',
+                'display': 'block'
+              });
+            }).catch(function (error) {
+              console.error(error)
+            })
         },
         "prefill": {
           "name": "",
@@ -309,7 +333,7 @@
           name,
           need_schwag,
           org,
-          t_shirt_size,
+          t_shirt_size: need_schwag ? t_shirt_size : undefined,
         };
 
         var rzp1 = new Razorpay(options);
