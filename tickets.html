@@ -115,7 +115,7 @@
                   🎟
                 </span>Get you ticket!</h1>
               <p class="lead text-faded">Sint incididunt elit voluptate dolor</p>
-              <form class="mt-4">
+              <form class="mt-4" id="ticketForm">
                 <div class="form-group">
                   <label for="attendeeName">Full name</label>
                   <input type="text" class="form-control" id="attendeeName" placeholder="Enter full name" required>
@@ -261,7 +261,7 @@
       // Updates the ticket cost and label based on the attendee type radio
       var options = {
         "key": "rzp_live_GgpctGriSvJGzP",
-        "amount": "", // 2000 paise = INR 20
+        "amount": "25000", // 2000 paise = INR 20
         "name": "ETHIndia",
         "description": "Tech Talks + Workshop on 10th August",
         "image": "/favicons/apple-touch-icon-152x152.png",
@@ -272,9 +272,6 @@
           "name": "",
           "email": "",
           "contact": ""
-        },
-        "notes": {
-          "address": ""
         },
         "theme": {
           "color": "#262662"
@@ -293,6 +290,16 @@
         }
       });
 
+      $("#ticketForm").submit(function (e) {
+        e.preventDefault();
+        options.prefill.name = $("#attendeeName").val();
+        options.prefill.email = $("#attendeeEmail").val();
+        options.prefill.contact = $("#attendeeMobile").val();
+
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+      });
+
       // Hides or display the shirt size options based on the checkbox
       $('#attendeeRefund').change(function () {
         if (this.checked) {
@@ -307,17 +314,6 @@
           })
         }
       });
-    });
-
-    options.prefill.name =  $("#attendeeName").val();
-    options.prefill.email =  $("#attendeeEmail").val();
-    options.prefill.contact =  $("#attendeeMobile").val();
-
-    var rzp1 = new Razorpay(options);
-
-    $("#rzp-button").click(function (e) {
-      rzp1.open();
-      e.preventDefault();
     });
 
     var animData = {
