@@ -144,6 +144,10 @@
                       Professional
                     </label>
                   </div>
+                  <div class="form-group mt-3">
+                    <label for="attendeeOrg" id="org-label">College</label>
+                    <input type="text" class="form-control" id="attendeeOrg" placeholder="Enter name">
+                  </div>
                   <div class="form-group form-check mt-4">
                     <input type="checkbox" class="form-check-input" id="attendeeRefund">
                     <label class="form-check-label" for="attendeeRefund">I'd prefer to get cool schwag instead of a refund! 🤘🏼</label>
@@ -253,12 +257,14 @@
 
       $("#sponsors-box").html(sponsorsBox);
 
-      // Updates the ticket cost based on the attendee type radio
+      // Updates the ticket cost and label based on the attendee type radio
       $("input[name=attendeeType]").change(function () {
         if (this.value === "student") {
           $("#ticket-amount").text("₹250")
+          $("#org-label").text("College")
         } else {
           $("#ticket-amount").text("₹500")
+          $("#org-label").text("Company")
         }
       });
 
