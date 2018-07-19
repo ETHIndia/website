@@ -99,14 +99,11 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <!-- <div style="max-width: 600px">
+          <div class="mx-auto" style="max-width: 600px; margin-bottom: 64px; display: none; visibility: hidden" id="success-alert">
             <div class="alert alert-success" role="alert">
               The ticket has been mailed to you!
             </div>
-            <div class="alert alert-danger" role="alert">
-              There was an issue booking the ticket. Please try again.
-            </div>
-          </div> -->
+          </div>
 
           <div class="jumbotron jumbotron-fluid mx-auto" style="max-width: 600px;">
             <div class="container">
@@ -150,7 +147,7 @@
                   </div>
                   <div class="form-group form-check mt-4">
                     <input type="checkbox" class="form-check-input" id="attendeeRefund">
-                    <label class="form-check-label" for="attendeeRefund">I'd prefer to get cool schwag instead of a refund! 🤘🏼</label>
+                    <label class="form-check-label" for="attendeeRefund">Yes, I'd prefer to get cool schwag instead of a refund! 🤘🏼</label>
                   </div>
                   <div class="form-group mt-3" id="shirtSizeSelect" style="visibility: hidden; display: none;">
                     <label for="shirtSize">T-shirt size</label>
@@ -266,6 +263,10 @@
         "description": "Tech Talks + Workshop on 10th August",
         "image": "/favicons/apple-touch-icon-152x152.png",
         "handler": function (response) {
+          $("#success-alert").css({
+            'visibility': 'visible',
+            'display': 'block'
+          });
           alert(response.razorpay_payment_id);
         },
         "prefill": {
@@ -292,9 +293,24 @@
 
       $("#ticketForm").submit(function (e) {
         e.preventDefault();
-        options.prefill.name = $("#attendeeName").val();
-        options.prefill.email = $("#attendeeEmail").val();
-        options.prefill.contact = $("#attendeeMobile").val();
+        var name = $("#attendeeName").val();
+        var email = $("#attendeeEmail").val();
+        var contact = $("#attendeeMobile").val();
+        var org = $("#attendeeOrg").val();
+        var need_schwag = $("#attendeeRefund").is(":checked");
+        var is_student = $('input[name=attendeeType]:checked').val() === "student";
+        var t_shirt_size = $('#shirtSize').find(":selected").val();
+
+        options.prefill.name = name;
+        options.prefill.email = email;
+        options.prefill.contact = contact;
+        options.notes = {
+          is_student,
+          name,
+          need_schwag,
+          org,
+          t_shirt_size,
+        };
 
         var rzp1 = new Razorpay(options);
         rzp1.open();
