@@ -98,48 +98,57 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <!-- <div class="alert alert-success" role="alert">
-            The ticket has been mailed to you!
-          </div>
-          <div class="alert alert-danger" role="alert">
-            There was an issue booking the ticket. Please try again.
+
+          <!-- <div style="max-width: 600px">
+            <div class="alert alert-success" role="alert">
+              The ticket has been mailed to you!
+            </div>
+            <div class="alert alert-danger" role="alert">
+              There was an issue booking the ticket. Please try again.
+            </div>
           </div> -->
-          <div class="jumbotron jumbotron-fluid">
+
+          <div class="jumbotron jumbotron-fluid mx-auto" style="max-width: 600px;">
             <div class="container">
-              <h1 class="display-4">
-                <span role="img" style="position: absolute; top: -60px; left: -45px; font-size: 120px">
+              <h1 class="display-4" style="position: relative;">
+                <span role="img" style="position: absolute; top: -108px; left: -96px; font-size: 120px">
                   🎟
                 </span>Get you ticket!</h1>
               <p class="lead text-faded">Sint incididunt elit voluptate dolor</p>
               <form class="mt-4">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Full name</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter full name">
+                  <label for="attendeeName">Full name</label>
+                  <input type="text" class="form-control" id="attendeeName" placeholder="Enter full name" required>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                  <label for="attendeeEmail">Email address</label>
+                  <input type="attendeeEmail" class="form-control" id="attendeeEmail" aria-describedby="emailHelp" placeholder="Enter email"
+                    required>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else</small>
                 </div>
                 <div class="form-group">
-                  <label for="mobile">Mobile Number</label>
-                  <input type="tel" class="form-control" id="mobile" placeholder="Enter mobile number" required>
+                  <label for="attendeeMobile">Mobile Number</label>
+                  <input type="tel" class="form-control" id="attendeeMobile" placeholder="Enter mobile number" required>
                 </div>
                 <div class="form-group mt-2">
                   <label for="exampleRadios1">I am a:</label>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
+                    <input class="form-check-input" type="radio" name="attendeeType" id="student" value="student" checked>
+                    <label class="form-check-label" for="student">
                       Student
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
+                    <input class="form-check-input" type="radio" name="attendeeType" id="professional" value="professional">
+                    <label class="form-check-label" for="professional">
                       Professional
                     </label>
                   </div>
-                  <div class="form-group mt-3">
+                  <div class="form-group form-check mt-4">
+                    <input type="checkbox" class="form-check-input" id="attendeeRefund">
+                    <label class="form-check-label" for="attendeeRefund">I'd prefer to get cool schwag instead of a refund! 🤘🏼</label>
+                  </div>
+                  <div class="form-group mt-3" id="shirtSizeSelect" style="visibility: hidden; display: none;">
                     <label for="shirtSize">T-shirt size</label>
                     <select class="form-control" id="shirtSize">
                       <option value="xs">XS</option>
@@ -151,14 +160,10 @@
                       <option value="xxxl">XXXL</option>
                     </select>
                   </div>
-                  <div class="form-group form-check mt-4">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">I'd prefer to get cool schwag instead of a refund! 🤘🏼</label>
-                  </div>
                 </div>
                 <div class="d-flex justify-content-between mt-5">
-                  <button type="submit" class="btn btn-primary mx-auto">Proceed to pay ₹
-                    <span id="ticket-amount">250</span>
+                  <button type="submit" class="btn btn-primary mx-auto">Proceed to pay
+                    <span id="ticket-amount">₹250</span>
                   </button>
                 </div>
               </form>
@@ -247,6 +252,30 @@
         `;
 
       $("#sponsors-box").html(sponsorsBox);
+
+      // Updates the ticket cost based on the attendee type radio
+      $("input[name=attendeeType]").change(function () {
+        if (this.value === "student") {
+          $("#ticket-amount").text("₹250")
+        } else {
+          $("#ticket-amount").text("₹500")
+        }
+      });
+
+      // Hides or display the shirt size options based on the checkbox
+      $('#attendeeRefund').change(function () {
+        if (this.checked) {
+          $("#shirtSizeSelect").css({
+            'visibility': 'visible',
+            'display': 'block'
+          })
+        } else {
+          $("#shirtSizeSelect").css({
+            'visibility': 'hidden',
+            'display': 'none'
+          })
+        }
+      });
     });
 
     var animData = {
