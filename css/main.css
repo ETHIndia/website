@@ -392,8 +392,9 @@ header.masthead p {
   margin-top: 0.4%;
 }
 
-#sponsors-box .dharma img {
-  width: 245px;
+#sponsors-box .sponsors-logo img {
+  max-width: 240px;
+  max-height: 80px;
 }
 
 .card button {
