@@ -233,6 +233,7 @@
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
     $(document).ready(function () {
 
@@ -258,11 +259,35 @@
       $("#sponsors-box").html(sponsorsBox);
 
       // Updates the ticket cost and label based on the attendee type radio
+      var options = {
+        "key": "rzp_live_GgpctGriSvJGzP",
+        "amount": "", // 2000 paise = INR 20
+        "name": "ETHIndia",
+        "description": "Tech Talks + Workshop on 10th August",
+        "image": "/favicons/apple-touch-icon-152x152.png",
+        "handler": function (response) {
+          alert(response.razorpay_payment_id);
+        },
+        "prefill": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        },
+        "notes": {
+          "address": ""
+        },
+        "theme": {
+          "color": "#262662"
+        }
+      };
+
       $("input[name=attendeeType]").change(function () {
         if (this.value === "student") {
+          options.amount = 250 * 100;
           $("#ticket-amount").text("₹250")
           $("#org-label").text("College")
         } else {
+          options.amount = 500 * 100;
           $("#ticket-amount").text("₹500")
           $("#org-label").text("Company")
         }
@@ -282,6 +307,17 @@
           })
         }
       });
+    });
+
+    options.prefill.name =  $("#attendeeName").val();
+    options.prefill.email =  $("#attendeeEmail").val();
+    options.prefill.contact =  $("#attendeeMobile").val();
+
+    var rzp1 = new Razorpay(options);
+
+    $("#rzp-button").click(function (e) {
+      rzp1.open();
+      e.preventDefault();
     });
 
     var animData = {
