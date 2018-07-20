@@ -94,3 +94,9 @@ section {
     background: $gray-900;
     text-shadow: none;
 }
+
+.jumbotron {
+    @media (max-width: 768px) {
+        padding: 32px 24px !important;
+    }
+}

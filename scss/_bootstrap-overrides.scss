@@ -90,7 +90,8 @@ h2 {
     h5 {
         font-weight: bold;
     }
-    p, h5 {
+    p,
+    h5 {
         font-size: 1rem;
     }
     p {
@@ -102,7 +103,7 @@ h2 {
     [class*="col-"] {
         padding-right: 6px;
         padding-left: 6px;
-      }
+    }
 }
 
 .card {
@@ -151,4 +152,16 @@ h2 {
 
 td {
     color: $white;
+}
+
+.jumbotron {
+    background-color: #1C274B;
+    border-radius: 4px;
+    border: 1px solid rgba(20, 25, 40, 0.08);
+    box-shadow: 0 16px 36px rgba(21, 29, 51, 0.24);
+    padding: 48px 36px;
+    z-index: 1032;
+    .container {
+        padding: 0;
+    }
 }
