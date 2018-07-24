@@ -278,16 +278,21 @@ header.masthead p {
 
 .schedule-box .schedule-day {
   background-color: rgba(0, 167, 211, 0.1);
-  margin-right: 3%;
+  width: 100%;
+  max-width: 480px;
+}
+
+.schedule-box .schedule-day:not(:last-child) {
+  margin-right: 40px;
 }
 
 .schedule-box .schedule-details {
-  margin-left: 7%;
-  display: inherit;
+  display: flex;
+  justify-content: space-around;
 }
 
 .schedule-box .talk-bubble {
-  margin-left: 14px;
+  margin-left: 32px;
 }
 
 .schedule-box .talk-bubble p {
@@ -296,28 +301,24 @@ header.masthead p {
 
 .schedule-box .hack-day p {
   font-size: 1.2rem;
-  float: left;
-  margin-left: 50px;
-  margin-top: 20px;
   font-weight: 700;
   line-height: 1.7rem;
+  margin: 0;
 }
 
 .schedule-box .talk-wrap {
-  text-align: center;
+  text-align: left;
   background: #00A7D3;
-  left: 0;
-  position: absolute;
   width: 100%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 80px;
 }
 
 .schedule-box .table-schedule {
   border: none;
   font-size: 1em;
-  margin: 1rem;
-  margin-top: 7rem;
-  position: relative;
+  margin-bottom: 0;
 }
 
 .schedule-box b,
@@ -329,10 +330,29 @@ header.masthead p {
   border: none;
 }
 
+.schedule-box .table-schedule > tbody > tr > td:not(:last-child) {
+  white-space: nowrap;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.schedule-box .table-schedule > tbody > tr > td:first-child {
+  padding-left: 24px;
+  padding-right: 32px;
+}
+
+.schedule-box .table-schedule > tbody > tr > td:last-child {
+  width: 99%;
+}
+
 .schedule-box .table-schedule td:last-of-type {
   border-left: 0;
   color: #fff;
   opacity: 0.5;
+}
+
+.schedule-box .table-schedule > tbody > tr:nth-child(odd) {
+  background-color: rgba(0, 167, 211, 0.1);
 }
 
 .schedule-box .schedule-time {
@@ -360,31 +380,13 @@ header.masthead p {
 }
 
 @media (max-width: 992px) {
-  .schedule-box .schedule-day {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 420px) {
-  .schedule-box .schedule-time {
-    display: none;
-  }
   .schedule-box .schedule-details {
-    margin-left: 0;
-    display: block;
+    flex-direction: column;
+    align-items: center;
   }
-  .schedule-box .talk-wrap {
-    top: -4.3rem;
-  }
-  .schedule-box .hack-day p {
-    font-size: 1.2rem;
-    margin-left: 2.2rem;
-  }
-  .schedule-box .table td,
-  .schedule-box .table th {
-    padding-top: 0.5rem;
-    padding-right: 0;
-    padding-left: 0;
+  .schedule-box .schedule-day:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
   }
 }
 
