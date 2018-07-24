@@ -109,6 +109,12 @@ section {
   text-shadow: none;
 }
 
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 32px 24px !important;
+  }
+}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   margin-top: 40px;
@@ -686,7 +692,8 @@ h2 {
   font-weight: bold;
 }
 
-.speaker-card-header p, .speaker-card-header h5 {
+.speaker-card-header p,
+.speaker-card-header h5 {
   font-size: 1rem;
 }
 
@@ -748,4 +755,17 @@ h2 {
 
 td {
   color: #fff;
+}
+
+.jumbotron {
+  background-color: #1C274B;
+  border-radius: 4px;
+  border: 1px solid rgba(20, 25, 40, 0.08);
+  box-shadow: 0 16px 36px rgba(21, 29, 51, 0.24);
+  padding: 48px 36px;
+  z-index: 1032;
+}
+
+.jumbotron .container {
+  padding: 0;
 }
