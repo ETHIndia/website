@@ -100,3 +100,15 @@ section {
         padding: 32px 24px !important;
     }
 }
+
+#ETHIndia4Women {
+    background-color: $secondary;
+
+    .text-container {
+        display: flex;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+}

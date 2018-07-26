@@ -115,6 +115,20 @@ section {
   }
 }
 
+#ETHIndia4Women {
+  background-color: #00A7D3;
+}
+
+#ETHIndia4Women .text-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #ETHIndia4Women .text-container {
+    flex-direction: column-reverse;
+  }
+}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   margin-top: 40px;
