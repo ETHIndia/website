@@ -101,14 +101,32 @@ section {
     }
 }
 
-#ETHIndia4Women {
+#ETHWomen {
     background-color: $secondary;
 
     .text-container {
         display: flex;
+        align-items: center;
+
+        img {
+            height: 240px;
+            margin-left: 3rem;
+        }
+
+        @media (max-width: 1199px) and (min-width: 992px) {
+            flex-direction: column;
+
+            img {
+                margin: 1rem 0; 
+            }
+        }
 
         @media (max-width: 768px) {
-            flex-direction: column-reverse;
+            flex-direction: column;
+
+            img {
+                margin: 1rem 0; 
+            }
         }
     }
 }

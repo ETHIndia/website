@@ -115,17 +115,35 @@ section {
   }
 }
 
-#ETHIndia4Women {
+#ETHWomen {
   background-color: #00A7D3;
 }
 
-#ETHIndia4Women .text-container {
+#ETHWomen .text-container {
   display: flex;
+  align-items: center;
+}
+
+#ETHWomen .text-container img {
+  height: 240px;
+  margin-left: 3rem;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  #ETHWomen .text-container {
+    flex-direction: column;
+  }
+  #ETHWomen .text-container img {
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: 768px) {
-  #ETHIndia4Women .text-container {
-    flex-direction: column-reverse;
+  #ETHWomen .text-container {
+    flex-direction: column;
+  }
+  #ETHWomen .text-container img {
+    margin: 1rem 0;
   }
 }
 
