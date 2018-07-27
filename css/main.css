@@ -115,6 +115,38 @@ section {
   }
 }
 
+#ETHWomen {
+  background-color: #00A7D3;
+}
+
+#ETHWomen .text-container {
+  display: flex;
+  align-items: center;
+}
+
+#ETHWomen .text-container img {
+  height: 240px;
+  margin-left: 3rem;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  #ETHWomen .text-container {
+    flex-direction: column;
+  }
+  #ETHWomen .text-container img {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #ETHWomen .text-container {
+    flex-direction: column;
+  }
+  #ETHWomen .text-container img {
+    margin: 1rem 0;
+  }
+}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   margin-top: 40px;
