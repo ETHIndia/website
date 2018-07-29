@@ -401,6 +401,7 @@ header.masthead p {
 #sponsors-box .sponsors-logo img {
   max-width: 240px;
   max-height: 80px;
+  min-height: 64px;
 }
 
 .card button {

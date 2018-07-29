@@ -1,11 +1,12 @@
 // Styling for Sponsors section
 
 #sponsors-box {
-    .ethglobal {
-        margin-top: 0.4%;
-    }
-    .sponsors-logo img {
-        max-width: 240px;
-        max-height: 80px;
-    }
+  .ethglobal {
+    margin-top: 0.4%;
+  }
+  .sponsors-logo img {
+    max-width: 240px;
+    max-height: 80px;
+    min-height: 64px;
+  }
 }
