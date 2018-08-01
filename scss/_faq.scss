@@ -30,6 +30,10 @@
     content: "\f107";
 }
 
+.card-header {
+    height: auto !important;
+}
+
 .card-header:hover .arrow:after {
     color: $black;
 }
