@@ -1,119 +1,167 @@
 // styling for Schedule section
 .schedule-box {
-    .schedule-day {
-        background-color: $dark-secondary; // margin-left: 4%;
-        width: 100%;
-        max-width: 480px;
+  .schedule-day {
+    width: 100%;
+    max-width: 480px;
+    font-size: 16px;
+  }
+  .schedule-details {
+    width: 100%;
+  }
+  .talk-bubble {
+    margin-left: 32px;
+    p {
+      text-transform: uppercase;
+    }
+  }
+  .hack-day p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    margin: 0;
+  }
+  .talk-wrap {
+    text-align: left;
+    background: $secondary;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  .table-schedule {
+    border: none;
+    font-size: 1em;
+    margin-bottom: 0;
+    background-color: $dark-secondary;
+  }
+  b,
+  strong {
+    font-weight: 300;
+  }
+  .table-schedule > tbody > tr > td {
+    border: none;
 
-        &:not(:last-child) {
-            margin-right: 40px;
-        }
+    &:not(:last-child) {
+      white-space: nowrap;
+      padding-right: 16px;
+      padding-left: 16px;
     }
-    .schedule-details {
-        display: flex;
-        justify-content: space-around;
+
+    &:first-child {
+      padding-left: 24px;
+      padding-right: 32px;
     }
-    .talk-bubble {
-        margin-left: 32px;
-        p {
-            text-transform: uppercase
-        }
+
+    &:last-child {
+      width: 99%;
     }
-    .hack-day p {
-        font-size: 1.2rem;
-        font-weight: 700;
-        line-height: 1.7rem;
-        margin: 0;
+  }
+  .table-schedule td:last-of-type {
+    border-left: 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .table-schedule > tbody > tr {
+    &:nth-child(odd) {
+      background-color: $dark-secondary;
     }
-    .talk-wrap {
-        text-align: left;
-        background: $secondary;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 80px;
+  }
+  .schedule-time {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    margin-top: 0.2rem;
+    background-repeat: no-repeat;
+  }
+  .schedule-time.morning {
+    background-image: url(../img/rising.svg);
+  }
+  .schedule-time.noon {
+    background-image: url(../img/sun.svg);
+  }
+  .schedule-time.evening {
+    background-image: url(../img/sunset.svg);
+  }
+  .schedule-time.night {
+    background-image: url(../img/moon.svg);
+  }
+  //   @media (max-width: 992px) {
+  //     .schedule-details {
+  //       flex-direction: column;
+  //       align-items: center;
+  //     }
+  //     .schedule-day {
+  //       &:not(:last-child) {
+  //         margin-right: 0;
+  //         margin-bottom: 40px;
+  //       }
+  //     }
+  //   }
+  // @media (max-width: 480px) {
+  //     .schedule-time {
+  //         display: none;
+  //     }
+  //     .hack-day p {
+  //         font-size: 1.2rem;
+  //         margin-left: 2.2rem;
+  //     }
+  //     .table td,
+  //     .table th {
+  //         padding-top: 0.5rem;
+  //         padding-right: 0;
+  //         padding-left: 0;
+  //     }
+  // }
+
+  .tag {
+    background-color: $yellow;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 2px 4px;
+    color: $white;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+
+  .subtitle {
+    color: $secondary;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  #day-1 {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .schedule-row {
+    display: flex;
+    margin-top: 64px;
+    justify-content: center;
+
+    .schedule-day:first-child {
+      margin-right: 24px;
     }
-    .table-schedule {
-        border: none;
-        font-size: 1em;
-        margin-bottom: 0;
-    }
-    b,
-    strong {
-        font-weight: 300;
-    }
-    .table-schedule>tbody>tr>td {
-        border: none;
-        
-        &:not(:last-child) {
-            white-space: nowrap;
-            padding-right: 16px;
-            padding-left: 16px;
-        }
+  }
+
+  @media (max-width: 992px) {
+    .schedule-row {
+      margin-top: 32px;
+      flex-direction: column;
+      align-items: center;
+
+      .schedule-day {
+        max-width: 640px;
 
         &:first-child {
-            padding-left: 24px;
-            padding-right: 32px;
+          margin-right: 0;
         }
 
         &:last-child {
-            width: 99%;
+          margin-top: 32px;
         }
+      }
     }
-    .table-schedule td:last-of-type {
-        border-left: 0;
-        color: $white;
-        opacity: 0.5;
-    }
-    .table-schedule>tbody>tr {
-        &:nth-child(odd) {
-            background-color: $dark-secondary;
-        }
-    }
-    .schedule-time {
-        width: 1em;
-        height: 1em;
-        position: absolute;
-        margin-top: 0.2rem;
-        background-repeat: no-repeat;
-    }
-    .schedule-time.morning {
-        background-image: url(../img/sunset.svg);
-    }
-    .schedule-time.noon {
-        background-image: url(../img/sun.svg);
-    }
-    .schedule-time.evening {
-        background-image: url(../img/sunset.svg);
-    }
-    .schedule-time.night {
-        background-image: url(../img/moon.svg);
-    }
-    @media (max-width: 992px) {
-        .schedule-details {
-            flex-direction: column;
-            align-items: center;
-        }
-        .schedule-day {
-            &:not(:last-child) {
-                margin-right: 0;
-                margin-bottom: 40px;
-            }
-        }
-    }
-    // @media (max-width: 480px) {
-    //     .schedule-time {
-    //         display: none;
-    //     }
-    //     .hack-day p {
-    //         font-size: 1.2rem;
-    //         margin-left: 2.2rem;
-    //     }
-    //     .table td,
-    //     .table th {
-    //         padding-top: 0.5rem;
-    //         padding-right: 0;
-    //         padding-left: 0;
-    //     }
-    // }
+  }
 }
