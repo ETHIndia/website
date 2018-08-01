@@ -438,6 +438,10 @@ header.masthead p {
   content: "\f107";
 }
 
+.card-header {
+  height: auto !important;
+}
+
 .card-header:hover .arrow:after {
   color: #000;
 }
