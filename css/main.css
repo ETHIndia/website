@@ -437,6 +437,7 @@ header.masthead p {
 #sponsors-box .sponsors-logo img {
   max-width: 240px;
   max-height: 80px;
+  min-height: 64px;
 }
 
 .card button {
@@ -471,6 +472,10 @@ header.masthead p {
 
 .toggle-panel .card-header.collapsed h5:after {
   content: "\f107";
+}
+
+.card-header {
+  height: auto !important;
 }
 
 .card-header:hover .arrow:after {
