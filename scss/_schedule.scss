@@ -3,11 +3,17 @@
   .nav {
     justify-content: center;
   }
+  .nav-pills .nav-link {
+    border-radius: .15rem;
+  }
   a.nav-link {
     padding-right: 36px;
     padding-left: 30px;
     font-weight: 500;
     color: $secondary !important;
+    &:hover {
+      background: $dark-secondary;
+    }
   }
   .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: $secondary;
@@ -20,26 +26,6 @@
   }
   .schedule-details {
     width: 100%;
-  }
-  .talk-bubble {
-    margin-left: 32px;
-    p {
-      text-transform: uppercase;
-    }
-  }
-  .hack-day p {
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.7rem;
-    margin: 0;
-  }
-  .talk-wrap {
-    text-align: left;
-    background: $secondary;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 80px;
   }
   .table-schedule {
     border: none;
@@ -152,13 +138,8 @@
 
   .schedule-row {
     display: flex;
-    // margin-top: 64px;
     justify-content: center;
 
-
-    // .schedule-day:first-child {
-    //   margin-right: 24px;
-    // }
   }
 
   @media (max-width: 992px) {

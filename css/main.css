@@ -286,11 +286,19 @@ header.masthead p {
   justify-content: center;
 }
 
+.schedule-box .nav-pills .nav-link {
+  border-radius: .15rem;
+}
+
 .schedule-box a.nav-link {
   padding-right: 36px;
   padding-left: 30px;
   font-weight: 500;
   color: #00a7d3 !important;
+}
+
+.schedule-box a.nav-link:hover {
+  background: rgba(0, 167, 211, 0.1);
 }
 
 .schedule-box .nav-pills .nav-link.active, .schedule-box .nav-pills .show > .nav-link {
@@ -306,30 +314,6 @@ header.masthead p {
 
 .schedule-box .schedule-details {
   width: 100%;
-}
-
-.schedule-box .talk-bubble {
-  margin-left: 32px;
-}
-
-.schedule-box .talk-bubble p {
-  text-transform: uppercase;
-}
-
-.schedule-box .hack-day p {
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.7rem;
-  margin: 0;
-}
-
-.schedule-box .talk-wrap {
-  text-align: left;
-  background: #00a7d3;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 80px;
 }
 
 .schedule-box .table-schedule {
