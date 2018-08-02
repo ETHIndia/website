@@ -1,5 +1,11 @@
 // styling for Schedule section
 .schedule-box {
+  .nav {
+    justify-content: center;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: $secondary;
+  }
   .schedule-day {
     width: 100%;
     max-width: 480px;
@@ -137,12 +143,12 @@
 
   .schedule-row {
     display: flex;
-    margin-top: 64px;
+    // margin-top: 64px;
     justify-content: center;
 
-    .schedule-day:first-child {
-      margin-right: 24px;
-    }
+    // .schedule-day:first-child {
+    //   margin-right: 24px;
+    // }
   }
 
   @media (max-width: 992px) {

@@ -282,6 +282,14 @@ header.masthead p {
   max-width: 400px;
 }
 
+.schedule-box .nav {
+  justify-content: center;
+}
+
+.schedule-box .nav-pills .nav-link.active, .schedule-box .nav-pills .show > .nav-link {
+  background-color: #00a7d3;
+}
+
 .schedule-box .schedule-day {
   width: 100%;
   max-width: 480px;
@@ -405,12 +413,7 @@ header.masthead p {
 
 .schedule-box .schedule-row {
   display: flex;
-  margin-top: 64px;
   justify-content: center;
-}
-
-.schedule-box .schedule-row .schedule-day:first-child {
-  margin-right: 24px;
 }
 
 @media (max-width: 992px) {
