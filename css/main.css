@@ -289,10 +289,13 @@ header.masthead p {
 .schedule-box a.nav-link {
   padding-right: 36px;
   padding-left: 30px;
+  font-weight: 500;
+  color: #00a7d3 !important;
 }
 
 .schedule-box .nav-pills .nav-link.active, .schedule-box .nav-pills .show > .nav-link {
   background-color: #00a7d3;
+  color: #fff !important;
 }
 
 .schedule-box .schedule-day {
