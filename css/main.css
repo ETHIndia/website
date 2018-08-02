@@ -353,6 +353,7 @@ header.masthead p {
 
 .schedule-box .table-schedule > tbody > tr > td:last-child {
   width: 99%;
+  text-align: left;
 }
 
 .schedule-box .table-schedule td:last-of-type {
