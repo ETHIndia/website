@@ -344,6 +344,7 @@ header.masthead p {
   white-space: nowrap;
   padding-right: 16px;
   padding-left: 16px;
+  text-align: left;
 }
 
 .schedule-box .table-schedule > tbody > tr > td:first-child {
