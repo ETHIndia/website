@@ -1,98 +1,159 @@
 // styling for Schedule section
 .schedule-box {
-    .schedule-day {
-        background-color: $dark-secondary; // margin-left: 4%;
-        margin-right: 3%;
+  .nav {
+    justify-content: center;
+  }
+  .nav-pills .nav-link {
+    border-radius: .15rem;
+  }
+  a.nav-link {
+    padding-right: 36px;
+    padding-left: 30px;
+    font-weight: 500;
+    color: $secondary !important;
+    &:hover {
+      background: $dark-secondary;
     }
-    .schedule-details {
-        margin-left: 7%;
-        display: inherit;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: $secondary;
+    color: #fff !important;
+  }
+  .schedule-day {
+    width: 100%;
+    max-width: 640px;
+    font-size: 16px;
+  }
+  .schedule-details {
+    width: 100%;
+  }
+  .table-schedule {
+    border: none;
+    font-size: 1em;
+    margin-bottom: 0;
+    background-color: $dark-secondary;
+  }
+  b,
+  strong {
+    font-weight: 300;
+  }
+  .table-schedule > tbody > tr > td {
+    border: none;
+
+    &:not(:last-child) {
+      white-space: nowrap;
+      padding-right: 16px;
+      padding-left: 16px;
+      text-align: left;
     }
-    .talk-bubble {
-        margin-left: 14px;
-        p {
-            text-transform: uppercase
+
+    &:first-child {
+      padding-left: 24px;
+      padding-right: 32px;
+    }
+
+    &:last-child {
+      width: 99%;
+      text-align: left;
+    }
+  }
+  .table-schedule td:last-of-type {
+    border-left: 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .table-schedule > tbody > tr {
+    &:nth-child(odd) {
+      background-color: $dark-secondary;
+    }
+  }
+  .schedule-time {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    margin-top: 0.2rem;
+    background-repeat: no-repeat;
+  }
+  .schedule-time.morning {
+    background-image: url(../img/rising.svg);
+  }
+  .schedule-time.noon {
+    background-image: url(../img/sun.svg);
+  }
+  .schedule-time.evening {
+    background-image: url(../img/sunset.svg);
+  }
+  .schedule-time.night {
+    background-image: url(../img/moon.svg);
+  }
+  //   @media (max-width: 992px) {
+  //     .schedule-details {
+  //       flex-direction: column;
+  //       align-items: center;
+  //     }
+  //     .schedule-day {
+  //       &:not(:last-child) {
+  //         margin-right: 0;
+  //         margin-bottom: 40px;
+  //       }
+  //     }
+  //   }
+  // @media (max-width: 480px) {
+  //     .schedule-time {
+  //         display: none;
+  //     }
+  //     .hack-day p {
+  //         font-size: 1.2rem;
+  //         margin-left: 2.2rem;
+  //     }
+  //     .table td,
+  //     .table th {
+  //         padding-top: 0.5rem;
+  //         padding-right: 0;
+  //         padding-left: 0;
+  //     }
+  // }
+
+  .tag {
+    background-color: $yellow;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 2px 4px;
+    color: $white;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+
+  .subtitle {
+    color: $secondary;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  #day-1 {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .schedule-row {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  @media (max-width: 992px) {
+    .schedule-row {
+      flex-direction: column;
+      align-items: center;
+
+      .schedule-day {
+        max-width: 640px;
+
+        &:first-child {
+          margin-right: 0;
         }
+      }
     }
-    .hack-day p {
-        font-size: 1.2rem;
-        float: left;
-        margin-left: 50px;
-        margin-top: 20px;
-        font-weight: 700;
-        line-height: 1.7rem;
-    }
-    .talk-wrap {
-        text-align: center;
-        background: $secondary;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        display: inline-block;
-    }
-    .table-schedule {
-        border: none;
-        font-size: 1em;
-        margin: 1rem;
-        margin-top: 7rem;
-        position: relative;
-    }
-    b,
-    strong {
-        font-weight: 300;
-    }
-    .table-schedule>tbody>tr>td {
-        border: none;
-    }
-    .table-schedule td:last-of-type {
-        border-left: 0;
-        color: $white;
-        opacity: 0.5;
-    }
-    .schedule-time {
-        width: 1em;
-        height: 1em;
-        position: absolute;
-        margin-top: 0.2rem;
-        background-repeat: no-repeat;
-    }
-    .schedule-time.morning {
-        background-image: url(../img/sunset.svg);
-    }
-    .schedule-time.noon {
-        background-image: url(../img/sun.svg);
-    }
-    .schedule-time.evening {
-        background-image: url(../img/sunset.svg);
-    }
-    .schedule-time.night {
-        background-image: url(../img/moon.svg);
-    }
-    @media (max-width: 992px) {
-        .schedule-day {
-            margin-left: 0;
-        }
-    }
-    @media (max-width: 420px) {
-        .schedule-time {
-            display: none;
-        }
-        .schedule-details {
-            margin-left: 0;
-            display: block;
-        }
-        .talk-wrap {
-            top: -4.3rem;
-        }
-        .hack-day p {
-            font-size: 1.2rem;
-            margin-left: 2.2rem;
-        }
-        .table td,
-        .table th {
-            padding-top: 0.5rem;
-            padding-right: 0;
-            padding-left: 0;
-        }
-    }
+  }
 }
