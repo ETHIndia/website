@@ -433,6 +433,10 @@ header.masthead p {
   min-height: 64px;
 }
 
+#sponsors-box #web3img {
+  max-width: 168px;
+}
+
 .card button {
   border: 1px solid #00a7d3;
 }
