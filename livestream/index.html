@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Tickets - ETHIndia | August 10 - 12, 2018</title>
+  <title>Livestream - ETHIndia | August 10 - 12, 2018</title>
   <meta property="fb:app_id" content="361151391074555" />
-  <meta property="og:title" content="Ticket + ETHIndia | August 10 - 12, 2018 @ Bangalore">
+  <meta property="og:title" content="Livestream - ETHIndia | August 10 - 12, 2018 @ Bangalore">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ethindia.co">
   <meta property="og:image" content="https://ethindia.co/img/fb-og.png" />
@@ -146,132 +146,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
-    function POST(url = "", data = {}) {
-      // Default options are marked with *
-      return fetch(url, {
-          method: "POST", // *GET, POST, PUT, DELETE, etc.
-          mode: "cors", // no-cors, cors, *same-origin
-          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-          credentials: "same-origin", // include, same-origin, *omit
-          headers: {
-            "Content-Type": "application/json; charset=utf-8",
-          },
-          referrer: "no-referrer", // no-referrer, *client
-          body: JSON.stringify(data), // body data type must match "Content-Type" header
-        })
-        .then(response => response.json()) // parses response to JSON
-        .catch(error => console.error(`Fetch Error =\n`, error));
-    };
-
-    $(document).ready(function () {
-
-      // lazy loading sponsor's images
-      const sponsorsBox =
-        `<div class="col-lg-4 text-center mb-5 mt-2 sponsors-logo">
-          <a href="https://www.ethereum.org/" target="_blank">
-            <img src="../img/ethereum.svg" alt="Ethereum logo"></img>
-          </a>
-        </div>
-        <div class="col-lg-4 text-center mb-5 ethglobal sponsors-logo">
-          <a href="https://ethglobal.co/" target="_blank">
-            <img src="../img/ethglobal.svg" alt="ETHGlobal logo"></img>
-          </a>
-        </div>
-        <div class="col-lg-4 text-center mb-5 dharma sponsors-logo">
-          <a href="https://dharma.io/" target="_blank">
-            <img src="../img/dharma.svg" alt="Dharma logo"></img>
-          </a>
-        </div>
-        `;
-
-      $("#sponsors-box").html(sponsorsBox);
-
-      // Updates the ticket cost and label based on the attendee type radio
-      var options = {
-        "key": "rzp_live_GgpctGriSvJGzP",
-        "amount": "25000", // 2000 paise = INR 20
-        "name": "ETHIndia",
-        "description": "Tech Talks + Workshop on 10th August",
-        "image": "/favicons/apple-touch-icon-152x152.png",
-        "handler": function (response) {
-          POST(`https://devfolio.co/api/events`, {
-              razorpay_payment_id: response.razorpay_payment_id,
-              amount: options.amount
-            })
-            .then(function () {
-              $("#success-alert").css({
-                'visibility': 'visible',
-                'display': 'block'
-              });
-
-              window.scrollTo(0, 0);
-            }).catch(function (error) {
-              console.error(error)
-            })
-        },
-        "prefill": {
-          "name": "",
-          "email": "",
-          "contact": ""
-        },
-        "theme": {
-          "color": "#262662"
-        }
-      };
-
-      $("input[name=attendeeType]").change(function () {
-        if (this.value === "student") {
-          options.amount = 250 * 100;
-          $("#ticket-amount").text("₹250")
-          $("#org-label").text("College")
-        } else {
-          options.amount = 500 * 100;
-          $("#ticket-amount").text("₹500")
-          $("#org-label").text("Company")
-        }
-      });
-
-      $("#ticketForm").submit(function (e) {
-        e.preventDefault();
-        var name = $("#attendeeName").val();
-        var email = $("#attendeeEmail").val();
-        var contact = $("#attendeeMobile").val();
-        var org = $("#attendeeOrg").val();
-        var need_schwag = $("#attendeeRefund").is(":checked");
-        var is_student = $('input[name=attendeeType]:checked').val() === "student";
-        var t_shirt_size = $('#shirtSize').find(":selected").val();
-
-        options.prefill.name = name;
-        options.prefill.email = email;
-        options.prefill.contact = contact;
-        options.notes = {
-          is_student,
-          name,
-          need_schwag,
-          org,
-          t_shirt_size: need_schwag ? t_shirt_size : undefined,
-        };
-
-        var rzp1 = new Razorpay(options);
-        rzp1.open();
-      });
-
-      // Hides or display the shirt size options based on the checkbox
-      $('#attendeeRefund').change(function () {
-        if (this.checked) {
-          $("#shirtSizeSelect").css({
-            'visibility': 'visible',
-            'display': 'block'
-          })
-        } else {
-          $("#shirtSizeSelect").css({
-            'visibility': 'hidden',
-            'display': 'none'
-          })
-        }
-      });
-    });
-
     var animData = {
       container: document.getElementById('ripple'),
       renderer: 'svg',
