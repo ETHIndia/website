@@ -1,3 +1,4 @@
+This file helps you in different steps. So, You have to read this.
 ## Landing page for ETHIndia 2018 
 https://2018.ethindia.co/
 
