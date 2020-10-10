@@ -10,7 +10,7 @@ https://2018.ethindia.co/
 - <i>`Gulp dev`</i> browserSync opens the project in your default browser and live reloads when changes are made
 - <i>`Gulp sass`</i> compiles SCSS files into CSS
 - <i>`Gulp minify-css`</i> minifies the compiled CSS file
-  - <i>`Gulp minify-js`</i> minifies the themes JS file
+- <i>`Gulp minify-js`</i> minifies the themes JS file
 - <i>`Gulp copy`</i> copies dependencies from node_modules to the vendor directory
 
 
