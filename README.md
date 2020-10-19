@@ -1,7 +1,7 @@
-## Landing page for ETHIndia 2018 
+## Landing page for ETHIndia 2018 - An amazing project.
 https://2018.ethindia.co/
 
-## Installation
+## Installation Guide
 - `npm install`
 
 #### Gulp Tasks
