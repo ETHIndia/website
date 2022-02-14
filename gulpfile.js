@@ -1,20 +1,20 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var header = require("gulp-header");
-var cleanCSS = require("gulp-clean-css");
-var rename = require("gulp-rename");
-var uglify = require("gulp-uglify");
-var pkg = require("./package.json");
-var browserSync = require("browser-sync").create();
+const browserSync = require("browser-sync").create();
+const cleanCSS = require("gulp-clean-css");
+const gulp = require("gulp");
+const header = require("gulp-header");
+const pkg = require("./package.json");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass")(require("sass"));
+const uglify = require("gulp-uglify");
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task("vendor", function() {
+function vendor(done) {
   // Bootstrap
   gulp
     .src([
       "./node_modules/bootstrap/dist/**/*",
       "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
-      "!./node_modules/bootstrap/dist/css/bootstrap-reboot*"
+      "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
     ])
     .pipe(gulp.dest("./vendor/bootstrap"));
 
@@ -25,92 +25,105 @@ gulp.task("vendor", function() {
       "!./node_modules/font-awesome/{less,less/*}",
       "!./node_modules/font-awesome/{scss,scss/*}",
       "!./node_modules/font-awesome/.*",
-      "!./node_modules/font-awesome/*.{txt,json,md}"
+      "!./node_modules/font-awesome/*.{txt,json,md}",
     ])
     .pipe(gulp.dest("./vendor/font-awesome"));
 
   // jQuery
   gulp
-    .src([
-      "./node_modules/jquery/dist/*",
-      "!./node_modules/jquery/dist/core.js"
-    ])
+    .src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"])
     .pipe(gulp.dest("./vendor/jquery"));
 
   // jQuery Easing
-  gulp
-    .src(["./node_modules/jquery.easing/*.js"])
-    .pipe(gulp.dest("./vendor/jquery-easing"));
+  gulp.src(["./node_modules/jquery.easing/*.js"]).pipe(gulp.dest("./vendor/jquery-easing"));
 
   // Scrollreveal
-  gulp
-    .src(["./node_modules/scrollreveal/dist/*.js"])
-    .pipe(gulp.dest("./vendor/scrollreveal"));
-});
+  gulp.src(["./node_modules/scrollreveal/dist/*.js"]).pipe(gulp.dest("./vendor/scrollreveal"));
 
-// Compile SCSS
-gulp.task("css:compile", function() {
-  return gulp
+  done();
+}
+
+// Compiles SCSS and minify
+function css(done) {
+  gulp
     .src("./scss/**/*.scss")
     .pipe(
       sass
         .sync({
-          outputStyle: "expanded"
+          outputStyle: "expanded",
         })
         .on("error", sass.logError)
     )
-    .pipe(gulp.dest("./css"));
-});
-
-// Minify CSS
-gulp.task("css:minify", ["css:compile"], function() {
-  return gulp
-    .src(["./css/*.css", "!./css/*.min.css"])
     .pipe(cleanCSS())
     .pipe(
       rename({
-        suffix: ".min"
+        suffix: ".min",
       })
     )
     .pipe(gulp.dest("./css"))
     .pipe(browserSync.stream());
-});
 
-// CSS
-gulp.task("css", ["css:compile", "css:minify"]);
+  done();
+}
 
 // Minify JavaScript
-gulp.task("js:minify", function() {
-  return gulp
+function js(done) {
+  gulp
     .src(["./js/*.js", "!./js/*.min.js"])
     .pipe(uglify())
     .pipe(
       rename({
-        suffix: ".min"
+        suffix: ".min",
       })
     )
     .pipe(gulp.dest("./js"))
     .pipe(browserSync.stream());
-});
 
-// JS
-gulp.task("js", ["js:minify"]);
+  done();
+}
 
-// Default task
-gulp.task("default", ["css", "js", "vendor"]);
+// Build
 
-// Configure the browserSync task
-gulp.task("browserSync", function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
+const build = gulp.series(css, js, vendor);
+
+// Development
+
+function watchCss(done) {
+  gulp.watch("./scss/*.scss", css);
+  done();
+}
+
+function watchJs(done) {
+  gulp.watch("./js/*.js", js);
+  done();
+}
+
+function watchHtml(done) {
+  gulp.watch("./*.html", browserSync.reload);
+  done();
+}
+
+// Watch all HTML, CSS, and JS files
+const watch = gulp.parallel(watchCss, watchJs, watchHtml);
+
+// BrowserSync config
+function server(done) {
+  if (browserSync) {
+    browserSync.init({
+      server: {
+        baseDir: "./",
+      },
+    });
+  }
+
+  done();
+}
 
 // Dev task
-gulp.task("dev", ["css", "js", "browserSync"], function() {
-  gulp.watch("./scss/*.scss", ["css"]);
-  gulp.watch("./js/*.js", ["js"]);
-  gulp.watch("./*.html", browserSync.reload);
-});
+const dev = gulp.series(build, watch, server);
+
+// Exports
+exports.build = build;
+exports.copy = vendor;
+exports.default = build;
+exports.dev = dev;
