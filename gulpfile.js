@@ -43,8 +43,8 @@ function vendor(done) {
   done();
 }
 
-// Compiles SCSS
-function cssCompile(done) {
+// Compiles SCSS and minify
+function css(done) {
   gulp
     .src("./scss/**/*.scss")
     .pipe(
@@ -54,15 +54,6 @@ function cssCompile(done) {
         })
         .on("error", sass.logError)
     )
-    .pipe(gulp.dest("./css"));
-
-  done();
-}
-
-// Minify CSS
-function cssMinify(done) {
-  gulp
-    .src(["./css/*.css", "!./css/*.min.css"])
     .pipe(cleanCSS())
     .pipe(
       rename({
@@ -75,12 +66,9 @@ function cssMinify(done) {
   done();
 }
 
-// CSS
-const css = gulp.series(cssCompile, cssMinify);
-
 // Minify JavaScript
-function js() {
-  return gulp
+function js(done) {
+  gulp
     .src(["./js/*.js", "!./js/*.min.js"])
     .pipe(uglify())
     .pipe(
@@ -90,6 +78,8 @@ function js() {
     )
     .pipe(gulp.dest("./js"))
     .pipe(browserSync.stream());
+
+  done();
 }
 
 // Build
@@ -130,7 +120,7 @@ function server(done) {
 }
 
 // Dev task
-const dev = gulp.series(css, js, server, watch);
+const dev = gulp.series(build, watch, server);
 
 // Exports
 exports.build = build;

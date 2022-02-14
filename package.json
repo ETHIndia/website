@@ -4,8 +4,8 @@
   "version": "",
   "description": "Landing page for ETHIndia 2018",
   "scripts": {
-    "build": "gulp",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "keywords": [
     "Hackathon"
