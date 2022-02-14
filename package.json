@@ -1,32 +1,40 @@
 {
-    "title": "",
-    "name": "",
-    "version": "",
-    "description": "",
-    "keywords": [
-        "Hackathon"
-    ],
-    "homepage": "",
-    "bugs": {
-        "url": "",
-        "email": ""
-    },
-    "license": "MIT",
-    "author": "",
-    "repository": {
-        "type": "git",
-        "url": ""
-    },
-    "dependencies": {
-        "bootstrap": "4.0.0"
-    },
-    "devDependencies": {
-        "browser-sync": "2.23.6",
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "3.9.2",
-        "gulp-header": "2.0.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
-        "gulp-uglify": "3.0.0"
-    }
+  "title": "",
+  "name": "ethindia-website-2018",
+  "version": "",
+  "description": "Landing page for ETHIndia 2018",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "Hackathon"
+  ],
+  "homepage": "",
+  "bugs": {
+    "url": "",
+    "email": ""
+  },
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "2.27.7",
+    "gulp": "4.0.2",
+    "gulp-clean-css": "4.3.0",
+    "gulp-header": "2.0.9",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "5.1.0",
+    "gulp-uglify": "3.0.2",
+    "sass": "1.49.7"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ]
 }
